@@ -16,9 +16,9 @@
             <a href="#">#desiderius</a>
             <nav>
                 <ul>
-                    <li><a href="frontend">HTML5 / CSS3 / JS6</a></li>
-                    <li><a href="contact">desiderius</a></li>
-                    <li><a href="backend">Python / Django</a></li>
+                    <li><a href="#frontend">HTML5 / CSS3 / JS6</a></li>
+                    <li><a href="#contact">desiderius</a></li>
+                    <li><a href="#backend">Python / Django</a></li>
                 </ul>
             </nav>
         </header>
@@ -68,14 +68,118 @@
                     <li>EcmaScript 6</li>
                     <li>Framework JS front et back</li>
                 </ul>
+                <a href="#contact">Des questions ?</a>
+                <a href="#contact">Réserver ma place</a>
+            </section>
+            <section id="backend">
+                <h1>Python / Django</h1>
+                <aside>
+                    <h2>Informations pratiques</h2>
+                    <dl>
+                        <dt>Lieux de la formation</dt>
+                        <dd>Lisbonne</dd>
+                        <dt>Date de la prochaine session</dt>
+                        <dd>Du <time datetime="2015-03-02">02 mars 2015</time> au <time datetime="2015-03-06">06 mars 2015</time>.</dd>
+                        <dt>Session à venir</dt>
+                        <dd>Date coming soon!</dd>
+                        <dt>Modalités</dt>
+                        <dd>Formation présentielle, 10 stagiaires maximum par session</dd>
+                        <dt>Formateur(s)</dt>
+                        <dd>Vincent Agnano (teacher)</dd>
+                        <dt>DIF</dt>
+                        <dd>Pris en compte</dd>
+                    </dl>
+                    <h2>Objectifs</h2>
+                    <ul>
+                        <li><p>Comprendre le fonctionnement et les qualités générales de Django</p></li>
+                        <li><p>Être capable d'écrire une application Web avec Django</p></li>
+                        <li><p>Connaître les forces et limites de Django</p></li>
+                    </ul>
+                    <h2>Public visé</h2>
+                    <ul>
+                        <li>Développeur Web Back-end</li>
+                    </ul>
+                    <h2>Prérequis</h2>
+                    <ul>
+                        <li>Connaissance Web</li>
+                        <li>Ordinateur portable avec Python 2.6 ou 2.7 installé sur la machine</li>
+                    </ul>
+                </aside>
+                <h2>Programme</h2>
+                <ul>
+                    <li>Découverte Django et environnements Python</li>
+                    <li>Architecture et organisation</li>
+                    <li>Réalisations d'applications</li>
+                    <li>Deploiement serveur</li>
+                    <li>Templating</li>
+                    <li>Perfectionnement</li>
+                </ul>
                 <a href="contact">Des questions ?</a>
                 <a href="contact">Réserver ma place</a>
             </section>
-            <section id="backend">
-
-            </section>
             <section id="contact">
-
+                <h1>Une question ? n'hésitez pas, nous vous répondrons rapidement !</h1>
+                <form action="contact.html" method="get">
+                    <fieldset>
+                        <legend>Step 1: Votre identité</legend>
+                        <ul>
+                            <li>
+                                <label for="nom_field">Nom</label>
+                                <input type="text" id="nom_field" placeholder="Votre nom" required="required" />
+                            </li>
+                            <li>
+                                <label for="prenom_field">Prénom</label>
+                                <input type="text" id="prenom_field" placeholder="Votre prénom" required="required" />
+                            </li>
+                            <li>
+                                <label for="email_field">Email</label>
+                                <input type="email" id="email_field" placeholder="exemple@domaine.fr" required="required" />
+                            </li>
+                            <li>
+                                <label for="phone_field">Téléphone</label>
+                                <input type="tel" id="telephone_field"  placeholder="(+33)06 00 00 00 00" />
+                            </li>
+                            <li>
+                                <label for="site_field">Votre site web</label>
+                                <input type="url" id="site_field" />
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Step 2: Votre statut</legend>
+                        <ul>
+                            <li>
+                                <label for="employed_field">Salarié</label>
+                                <input type="radio" id="employed_field " />
+                            </li>
+                            <li>  
+                                <label for="formation_office_field">Organisme de formation</label>
+                                <input type="radio" id="formation_office" />
+                            </li>
+                            <li>
+                                <label for="independent_field">Indépendant</label>
+                                <input type="radio" id="independent_field" />
+                            </li>
+                            <li>
+                                <label for="student_field">Etudiant</label>
+                                <input type="radio" id="student_field" />
+                            </li>
+                            <li>
+                                <label for="unemployed_field">Sans emplois</label>
+                                <input type="radio" id="unemployedt_field" />
+                            </li>
+                            <li>
+                                <label for="others_field">Autres</label>
+                                <input type="radio" id="others_field" />
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Step 3: Votre message</legend>
+                        <textarea id="message" placeholder="A vous de jouer !" required="required"></textarea>
+                    </fieldset>
+                    <button type="submit">Envoyer</button>
+                </form>
             </section>
         </main>
     </body>
