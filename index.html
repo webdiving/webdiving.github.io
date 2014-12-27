@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <title>WebDiving - Formations Web immersives</title>
+        <title>Formations de Développement Web immersives - WebDiving</title>
 
-        <meta name="description" content="Wokshops et Formations HTML5, CSS3, Python, Django. Formations aux bonnes pratiques dans une ambiance immersive.">
-        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="Wokshops et Formations HTML5, CSS3, Python, Django. Formations aux bonnes pratiques dans une ambiance immersive." />
+        <meta name="viewport" content="width=device-width" />
 
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,600,400italic,300italic,300,800" />
-
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="./js/tinybox/style.css" />
         <link rel="stylesheet" type="text/css" href="./css/main.css" />
+
     </head>
 
     <body>
         <header>
-            <h1>Formations immersives au Développement Web</h1>
+            <h1>Formations immersives de Développement Web</h1>
             <h2>1 semaine de voyage dans le Dev</h2>
             <nav>
                 <a href="#frontend" title="Formation HTML5, CSS3 et Javascript">HTML5 / CSS3 / JS+</a>
@@ -27,6 +29,18 @@
         <main>
             <section id="frontend">
                 <h1>HTML5 / CSS3 / JS+</h1>
+                <h2>Naples, du <time datetime="2015-03-02">2 au 6 mars 2015</time>, en anglais<sup><a href="#which-language">*</a></sup></h2>
+
+                <p>Au programme une immersion dans les nouveautés <strong>HTML5</strong>, faire des animations poussées en <strong>CSS3</strong>, tirer les limites du <strong>responsive-design</strong>, réaliser un site <strong>sans <code>div</code> ni <code>class</code> ou <code>id</code></strong>, utiliser des <strong>préprocesseurs et postprocesseurs</strong> CSS, jouer avec les <strong>web-components</strong>, test des <strong>Frameworks CSS</strong> et de <strong>NodeJS</strong>, faire des <strong>tests</strong> fonctionnels, découvrir <strong>ReactJS</strong>, respecter les <strong>bonnes pratiques</strong>, creuser vos idées et projets, …</p>
+
+                <nav>
+                    <a href="https://www.weezevent.com/webdiving-html5-css3-js#user_block_home_1" class="info">En savoir plus</a>
+                    <a href="https://www.weezevent.com/webdiving-html5-css3-js" data-href="register-html5-napoli" class="register">M'enregistrer</a>
+                </nav>
+
+                <a title="Logiciel billetterie en ligne" href="http://www.weezevent.com//?c=sys_widget" class="weezevent-widget-integration" target="_blank" data-src="https://www.weezevent.com/widget_billeterie.php?id_evenement=94293&amp;code=27447&amp;resize=1&amp;color_primary=00AEEF" data-width="650" data-height="600" data-id="94293" data-resize="1" data-noscroll="0" data-nopb="0">Billetterie Weezevent</a><script type="text/javascript" src="https://www.weezevent.com/js/widget/min/widget.min.js"></script>
+            </section>
+                <!--
                 <aside>
                     <h2>Informations pratiques</h2>
                     <dl>
@@ -139,7 +153,7 @@
                                 <label for="email_field">Email</label>
                                 <input type="email" id="email_field" placeholder="exemple@domaine.fr" required="required" />
                             </li>
-<!-- less essential         <li>
+<-!-- less essential         <li>
                                 <label for="phone_field">Téléphone</label>
                                 <input type="tel" id="telephone_field"  placeholder="(+33)06 00 00 00 00" />
                             </li>
@@ -147,9 +161,9 @@
                                 <label for="site_field">Votre site web</label>
                                 <input type="url" id="site_field" />
                             </li>
-                        </ul>    -->
+                        </ul>    - ->
                     </fieldset>
-<!-- less essential <fieldset>
+<-!-- less essential <fieldset>
                         <legend>Step 2: Votre statut</legend>
                         <ul>
                             <li>
@@ -177,7 +191,7 @@
                                 <input type="radio" id="others_field" />
                             </li>
                         </ul>
-                    </fieldset>    -->
+                    </fieldset>   - ->
                     <fieldset>
                         <legend>Step 2: Votre message</legend>
                         <textarea id="message" placeholder="A vous de jouer !" required="required"></textarea>
@@ -185,6 +199,41 @@
                     <input type="submit">Envoyer</input>
                 </form>
             </section>
+            -->
         </main>
+
+        <script type="text/javascript" src="./js/tinybox/packed.js"></script>
+        <script type="text/javascript">
+
+            // Weezevent IFrame click to open popup
+            var popupButton = document.querySelector('a[data-href]');
+            var iframeWrapper = document.querySelector('nav + div');
+            var iframe = iframeWrapper.querySelector('iframe');
+
+            iframeWrapper.classList.add('registration', 'init');
+
+            popupButton.onclick = function(evt) {
+                evt.preventDefault();
+                iframe.classList.remove('init')
+                console.debug(iframe.attributes['src'])
+                TINY.box.show({
+                    iframe:"https://www.weezevent.com/widget_billeterie.php?id_evenement=94293&amp;code=27447&amp;resize=1&amp;color_primary=00AEEF&amp;v=2",
+                    width: 700,
+                    height:520
+                });
+            }
+
+            if(!iframe) {
+                console.error("iframe query selector did not match!");
+            }
+
+            // Open external link in a new window
+            [].map.call(document.querySelectorAll('a[href^=http]'), function(a) {
+                a.onclick = function(evt) {
+                    evt.preventDefault();
+                    window.open(this.href);
+                }
+            });
+        </script>
     </body>
 </html>
