@@ -132,17 +132,26 @@ main {
 
 			.location:before {
 				content: "\f124";
+                color: #36d;
 			}
 			.date:before {
 				content: "\f073";
+                color: #36d;
 			}
 			.language:before {
 				content: "\f1ab";
+                color: #36d;
 			}
 		}
 
 		&> p {
 			margin: 1em 0;
+            strong {
+                color: #36d;
+                code {
+                    text-decoration: underline;
+                }
+            }
 		}
 
 		nav {
@@ -179,6 +188,7 @@ main {
 			&> h1::before {
 				@extend .head-icon;
 				content: "\f13b";
+                color: #36d;
 			}
 		}
 
