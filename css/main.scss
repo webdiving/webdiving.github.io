@@ -11,6 +11,11 @@
 
 }
 
+@keyframes swing {
+    0%{transform: rotate(-3deg)}
+    50%{transform: rotate(3deg)}
+    100%{transform: rotate(-3deg)}
+}
 
 @font-face {
     font-family: 'BebasNeueRegular';
@@ -32,6 +37,7 @@ html, body {
 body {
 	font: 400 1rem "Open Sans", Arial, sans-serif;
 	line-height: 1.8em;
+	color: #125;
 
 	&> header {
 		background: transparent url(../images/header-bg.jpg) no-repeat top center;
@@ -54,10 +60,11 @@ body {
 			font-style: italic;
 		}
 		&> h3 {
-		    font-size: 2.5em;
+		    font-size: 3.5em;
 		    padding-top: 0px;
 		    margin-top: 0px;
 		    margin-bottom: 20px;
+		    font-family: "BebasNeueRegular",Arial,sans-serif;
 		}
 
 		nav {
@@ -89,6 +96,23 @@ body {
 					background: url(../images/header-nav-right.svg);
 				}
 			}
+		}
+
+		&> a {
+			background: transparent url('../images/early-bird.png') no-repeat top right;
+			display: block;
+			width: 136px;
+			height: 170px;
+			margin: -17px auto auto;
+			border: medium none;
+			text-indent: -3000px;
+		    animation: swing 5s infinite ease-in-out;
+		    transform-origin: center top;
+
+		    &:visited,
+		    &:focus {
+		    	border: none;
+		    }
 		}
 	}
 }
@@ -126,7 +150,7 @@ main {
 
 			}
 			a {
-				color: #125;
+				color: #346;
 				text-decoration: none;
 			}
 

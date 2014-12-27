@@ -11,6 +11,13 @@ main > section aside .language:before, main > section nav a.info::before, main >
   text-align: center;
   font-size: 3em; }
 
+@keyframes swing {
+  0% {
+    transform: rotate(-3deg); }
+  50% {
+    transform: rotate(3deg); }
+  100% {
+    transform: rotate(-3deg); } }
 @font-face {
   font-family: 'BebasNeueRegular';
   src: url("../fonts/BebasNeue-webfont.eot");
@@ -24,7 +31,8 @@ html, body {
 
 body {
   font: 400 1rem "Open Sans", Arial, sans-serif;
-  line-height: 1.8em; }
+  line-height: 1.8em;
+  color: #125; }
   body > header {
     background: transparent url(../images/header-bg.jpg) no-repeat top center;
     background-size: 100% 100%;
@@ -42,10 +50,11 @@ body {
       font-weight: 600;
       font-style: italic; }
     body > header > h3 {
-      font-size: 2.5em;
+      font-size: 3.5em;
       padding-top: 0px;
       margin-top: 0px;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-family: "BebasNeueRegular",Arial,sans-serif; }
     body > header nav {
       margin-top: 90px; }
       body > header nav > a {
@@ -68,6 +77,18 @@ body {
           font-size: 2.3em; }
         body > header nav > a:nth-child(3) {
           background: url(../images/header-nav-right.svg); }
+    body > header > a {
+      background: transparent url("../images/early-bird.png") no-repeat top right;
+      display: block;
+      width: 136px;
+      height: 170px;
+      margin: -17px auto auto;
+      border: medium none;
+      text-indent: -3000px;
+      animation: swing 5s infinite ease-in-out;
+      transform-origin: center top; }
+      body > header > a:visited, body > header > a:focus {
+        border: none; }
 
 main {
   font-size: 1.1em; }
@@ -91,7 +112,7 @@ main {
       main > section aside .language {
         margin-right: 2em; }
       main > section aside a {
-        color: #125;
+        color: #346;
         text-decoration: none; }
       main > section aside .location:before {
         content: "\f124"; }
