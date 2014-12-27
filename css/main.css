@@ -1,5 +1,15 @@
-.icon {
-  font-family: FontAwesome; }
+.pre-icon, main > section aside .location:before,
+main > section aside .date:before,
+main > section aside .language:before, main > section nav a.info::before, main > section nav a.register::before {
+  font-family: FontAwesome;
+  margin-right: .5em; }
+
+.head-icon, main > section#html5 > h1::before {
+  font-family: FontAwesome;
+  padding: 0em 0 .5em;
+  display: block;
+  text-align: center;
+  font-size: 3em; }
 
 @font-face {
   font-family: 'BebasNeueRegular';
@@ -22,17 +32,22 @@ body {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 100px; }
-    body > header h1 {
+    padding-top: 35px; }
+    body > header > h1 {
       margin: 0;
       font-size: 1.4em; }
-    body > header h2 {
+    body > header > h2 {
       font-size: .85em;
       margin-top: 0;
       font-weight: 600;
       font-style: italic; }
+    body > header > h3 {
+      font-size: 2.5em;
+      padding-top: 0px;
+      margin-top: 0px;
+      margin-bottom: 20px; }
     body > header nav {
-      margin-top: 110px; }
+      margin-top: 90px; }
       body > header nav > a {
         display: inline-block;
         width: 225px;
@@ -54,31 +69,57 @@ body {
         body > header nav > a:nth-child(3) {
           background: url(../images/header-nav-right.svg); }
 
-main > section {
-  padding: 5em 10em; }
-  main > section > h1 {
-    text-align: center;
-    margin-bottom: .5em;
-    font-size: 2.5em; }
-  main > section > h2 {
-    text-align: center;
-    margin-bottom: 1em;
-    font-weight: 1em; }
-  main > section nav {
-    text-align: center; }
-    main > section nav a.register,
-    main > section nav a.info {
-      color: #fff;
+main {
+  font-size: 1.1em; }
+  main > section {
+    padding: 5em 10em; }
+    main > section > h1 {
+      text-align: center;
+      margin: 1em 0 .2em;
+      font-size: 2.2em; }
+    main > section > h2 {
+      text-align: center;
+      margin: .5em 0 1em;
+      font-weight: normal;
+      font-size: 1.1em; }
+    main > section aside {
+      text-align: center;
       font-size: 1.2em;
-      text-decoration: none;
-      padding: .5em 1em;
-      margin-right: .5em;
-      border-radius: 5px;
-      background-color: #08e; }
-    main > section nav a.register {
-      background-color: #6c4; }
-
-div.registration.init {
-  display: none; }
+      padding: .2em 0; }
+      main > section aside .location,
+      main > section aside .date,
+      main > section aside .language {
+        margin-right: 2em; }
+      main > section aside a {
+        color: #125;
+        text-decoration: none; }
+      main > section aside .location:before {
+        content: "\f124"; }
+      main > section aside .date:before {
+        content: "\f073"; }
+      main > section aside .language:before {
+        content: "\f1ab"; }
+    main > section > p {
+      margin: 1em 0; }
+    main > section nav {
+      text-align: center;
+      margin: 3em 0 1em; }
+      main > section nav a.info, main > section nav a.register {
+        color: #fff;
+        font-size: 1.2em;
+        text-decoration: none;
+        padding: .5em 1em;
+        margin-right: .5em;
+        border-radius: 5px; }
+      main > section nav a.info {
+        background-color: #08e; }
+        main > section nav a.info::before {
+          content: "\f05a"; }
+      main > section nav a.register {
+        background-color: #6c4; }
+        main > section nav a.register::before {
+          content: "\f0a9"; }
+    main > section#html5 > h1::before {
+      content: "\f13b"; }
 
 /*# sourceMappingURL=main.css.map */

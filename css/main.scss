@@ -1,5 +1,14 @@
-.icon {
+.pre-icon {
 	font-family: FontAwesome;
+	margin-right: .5em;
+}
+.head-icon {
+	font-family: FontAwesome;
+	padding: 0em 0 .5em;
+	display: block;
+	text-align: center;
+	font-size: 3em;
+
 }
 
 
@@ -31,22 +40,28 @@ body {
 		color : #fff;
 		text-transform: uppercase;
 		text-align: center;
-		padding-top: 100px;
+		padding-top: 35px;
 
-		h1 {
+		&> h1 {
 			margin: 0;
 			font-size: 1.4em;
 		}
 
-		h2 {
+		&> h2 {
 			font-size: .85em;
 			margin-top: 0;
 			font-weight: 600;
 			font-style: italic;
 		}
+		&> h3 {
+		    font-size: 2.5em;
+		    padding-top: 0px;
+		    margin-top: 0px;
+		    margin-bottom: 20px;
+		}
 
 		nav {
-			margin-top: 110px;
+			margin-top: 90px;
 
 			&> a {
 				display: inline-block;
@@ -79,41 +94,93 @@ body {
 }
 
 main {
+	font-size: 1.1em;
+
 	&> section {
 		padding: 5em 10em;
 
 		&> h1 {
 			text-align: center;
-			margin-bottom: .5em;
-			font-size: 2.5em;
+			margin: 1em 0 .2em;
+			font-size: 2.2em;
 		}
 		&> h2 {
 			text-align: center;
-			margin-bottom: 1em;
-			font-weight: 1em;
+			margin: .5em 0 1em;
+			font-weight: normal;
+			font-size: 1.1em;
+		}
+
+		aside {
+			text-align: center;
+			font-size: 1.2em;
+			padding: .2em 0;
+
+			.location,
+			.date,
+			.language {
+				margin-right: 2em;
+				&:before {
+					@extend .pre-icon;
+				}
+
+			}
+			a {
+				color: #125;
+				text-decoration: none;
+			}
+
+			.location:before {
+				content: "\f124";
+			}
+			.date:before {
+				content: "\f073";
+			}
+			.language:before {
+				content: "\f1ab";
+			}
+		}
+
+		&> p {
+			margin: 1em 0;
 		}
 
 		nav {
 			text-align: center;
-			a.register,
-			a.info {
-				color: #fff;
-				font-size: 1.2em;
-				text-decoration: none;
-				padding: .5em 1em;
-				margin-right: .5em;
-				border-radius: 5px;
-				background-color: #08e;
+			margin: 3em 0 1em;
+			a {
+				&.info,
+				&.register {
+					color: #fff;
+					font-size: 1.2em;
+					text-decoration: none;
+					padding: .5em 1em;
+					margin-right: .5em;
+					border-radius: 5px;
+				}
+				&.info {
+					background-color: #08e;
+					&::before {
+						@extend .pre-icon;
+						content: "\f05a";
+					}
+				}
+				&.register {
+					background-color: #6c4;
+					&::before {
+						@extend .pre-icon;
+						content: "\f0a9";
+					}
+				}
 			}
-			a.register {
-				background-color: #6c4;
+		}
+
+		&#html5 {
+			&> h1::before {
+				@extend .head-icon;
+				content: "\f13b";
 			}
 		}
 
 	}
-}
-
-// Weezevent iframe
-div.registration.init {
-	display: none;
 }
