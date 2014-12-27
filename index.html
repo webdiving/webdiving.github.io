@@ -22,7 +22,7 @@
             <h2>1 semaine de voyage dans le Dev</h2>
             <nav>
                 <a href="#frontend" title="Formation HTML5, CSS3 et Javascript">HTML5 / CSS3 / JS+</a>
-                <a href="#contact" title="Informations et contact">WebDiving</a>
+                <a href="#contact" data-href="https://www.weezevent.com/widget_multi.php?39801.1.1" title="Réserver une place">Réserver !</a>
                 <a href="#backend" title="Formation Django et révision de Python">Python / Django</a>
             </nav>
         </header>
@@ -35,10 +35,9 @@
 
                 <nav>
                     <a href="https://www.weezevent.com/webdiving-html5-css3-js#user_block_home_1" class="info">En savoir plus</a>
-                    <a href="https://www.weezevent.com/webdiving-html5-css3-js" data-href="register-html5-napoli" class="register">M'enregistrer</a>
+                    <a href="https://www.weezevent.com/webdiving-html5-css3-js" data-href="https://www.weezevent.com/widget_billeterie.php?id_evenement=94293&amp;code=27447&amp;resize=1&amp;color_primary=00AEEF&amp;v=2" class="register">Réserver</a>
                 </nav>
 
-                <a title="Logiciel billetterie en ligne" href="http://www.weezevent.com//?c=sys_widget" class="weezevent-widget-integration" target="_blank" data-src="https://www.weezevent.com/widget_billeterie.php?id_evenement=94293&amp;code=27447&amp;resize=1&amp;color_primary=00AEEF" data-width="650" data-height="600" data-id="94293" data-resize="1" data-noscroll="0" data-nopb="0">Billetterie Weezevent</a><script type="text/javascript" src="https://www.weezevent.com/js/widget/min/widget.min.js"></script>
             </section>
                 <!--
                 <aside>
@@ -205,35 +204,28 @@
         <script type="text/javascript" src="./js/tinybox/packed.js"></script>
         <script type="text/javascript">
 
-            // Weezevent IFrame click to open popup
-            var popupButton = document.querySelector('a[data-href]');
-            var iframeWrapper = document.querySelector('nav + div');
-            var iframe = iframeWrapper.querySelector('iframe');
-
-            iframeWrapper.classList.add('registration', 'init');
-
-            popupButton.onclick = function(evt) {
-                evt.preventDefault();
-                iframe.classList.remove('init')
-                console.debug(iframe.attributes['src'])
-                TINY.box.show({
-                    iframe:"https://www.weezevent.com/widget_billeterie.php?id_evenement=94293&amp;code=27447&amp;resize=1&amp;color_primary=00AEEF&amp;v=2",
-                    width: 700,
-                    height:520
-                });
-            }
-
-            if(!iframe) {
-                console.error("iframe query selector did not match!");
-            }
-
             // Open external link in a new window
             [].map.call(document.querySelectorAll('a[href^=http]'), function(a) {
                 a.onclick = function(evt) {
-                    evt.preventDefault();
                     window.open(this.href);
+                    evt.preventDefault();
                 }
             });
+
+            // Any link with a data-href attribute should open a modal iframe.
+            var popupButtons = document.querySelectorAll('a[data-href]');
+
+            [].map.call(popupButtons, function(button) {
+                button.onclick = function(evt) {
+                    evt.preventDefault();
+                    TINY.box.show({
+                        iframe: this.attributes['data-href'].value,
+                        width: 700,
+                        height: 520
+                    });
+                }
+            });
+
         </script>
     </body>
 </html>
