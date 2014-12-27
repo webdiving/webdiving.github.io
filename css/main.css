@@ -89,6 +89,13 @@ body {
       transform-origin: center top; }
       body > header > a:visited, body > header > a:focus {
         border: none; }
+  body > footer {
+    padding: 2em 0 3em;
+    background: none repeat scroll 0% 0% #0088ee;
+    color: #fff;
+    text-align: center; }
+    body > footer a {
+      color: #fff; }
 
 main {
   font-size: 1.1em; }
