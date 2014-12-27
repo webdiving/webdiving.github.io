@@ -41,6 +41,8 @@ body {
 		text-transform: uppercase;
 		text-align: center;
 		padding-top: 35px;
+        position: relative;
+        z-index: 1;
 
 		&> h1 {
 			margin: 0;
@@ -103,6 +105,10 @@ main {
 			text-align: center;
 			margin: 1em 0 .2em;
 			font-size: 2.2em;
+            position: relative;
+            top: -185px;
+            left: 0;
+            z-index: 0;
 		}
 		&> h2 {
 			text-align: center;
@@ -188,7 +194,7 @@ main {
 			&> h1::before {
 				@extend .head-icon;
 				content: "\f13b";
-                color: #36d;
+                color: rgba(1, 123, 214, 0.95);
 			}
 		}
 

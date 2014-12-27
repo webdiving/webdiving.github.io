@@ -32,7 +32,9 @@ body {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 35px; }
+    padding-top: 35px;
+    position: relative;
+    z-index: 1; }
     body > header > h1 {
       margin: 0;
       font-size: 1.4em; }
@@ -76,7 +78,11 @@ main {
     main > section > h1 {
       text-align: center;
       margin: 1em 0 .2em;
-      font-size: 2.2em; }
+      font-size: 2.2em;
+      position: relative;
+      top: -185px;
+      left: 0;
+      z-index: 0; }
     main > section > h2 {
       text-align: center;
       margin: .5em 0 1em;
@@ -128,6 +134,6 @@ main {
           content: "\f0a9"; }
     main > section#html5 > h1::before {
       content: "\f13b";
-      color: #36d; }
+      color: rgba(1, 123, 214, 0.95); }
 
 /*# sourceMappingURL=main.css.map */
