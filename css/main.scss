@@ -191,28 +191,28 @@ main {
 
 			}
 			a {
-				color: #346;
+				color: #125;
 				text-decoration: none;
 			}
 
 			.location:before {
 				content: "\f124";
-                color: #125;
+                color: #2988e6;
 			}
 			.date:before {
 				content: "\f073";
-                color: #125;
+                color: #2988e6;
 			}
 			.language:before {
 				content: "\f1ab";
-                color: #125;
+                color: #2988e6;
 			}
 		}
 
 		&> p {
 			margin: 1em 0;
             strong {
-                color: #125;
+                color: #2988e6;
                 code {
                     text-decoration: underline;
                 }

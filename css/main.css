@@ -154,21 +154,21 @@ main {
       main > section aside .language {
         margin-right: 2em; }
       main > section aside a {
-        color: #346;
+        color: #125;
         text-decoration: none; }
       main > section aside .location:before {
         content: "\f124";
-        color: #125; }
+        color: #2988e6; }
       main > section aside .date:before {
         content: "\f073";
-        color: #125; }
+        color: #2988e6; }
       main > section aside .language:before {
         content: "\f1ab";
-        color: #125; }
+        color: #2988e6; }
     main > section > p {
       margin: 1em 0; }
       main > section > p strong {
-        color: #125; }
+        color: #2988e6; }
         main > section > p strong code {
           text-decoration: underline; }
     main > section nav {
