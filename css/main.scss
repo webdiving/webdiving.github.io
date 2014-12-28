@@ -50,7 +50,12 @@ body {
 		padding-top: 35px;
         position: relative;
         z-index: 1;
-
+        &::after {
+            display: block;
+            width:200px;
+            height:200px;
+            background:#069;
+        }
 		&> h1 {
 			margin: 0;
 			font-size: 1.4em;
