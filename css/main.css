@@ -4,7 +4,7 @@ main > section aside .language:before, main > section nav a.info::before, main >
   font-family: FontAwesome;
   margin-right: .5em; }
 
-.head-icon {
+.head-icon, body > header::after {
   font-family: FontAwesome;
   padding: 0em 0 .5em;
   display: block;
@@ -18,6 +18,23 @@ main > section aside .language:before, main > section nav a.info::before, main >
     transform: rotate(3deg); }
   100% {
     transform: rotate(-3deg); } }
+@keyframes updown {
+  0% {
+    top: 12.5em; }
+  40% {
+    top: 12.5em; }
+  50% {
+    top: 13em; }
+  60% {
+    top: 12.5em; }
+  70% {
+    top: 13em; }
+  80% {
+    top: 12.5em; }
+  90% {
+    top: 13em; }
+  100% {
+    top: 12.5em; } }
 @font-face {
   font-family: 'BebasNeueRegular';
   src: url("../fonts/BebasNeue-webfont.eot");
@@ -37,18 +54,19 @@ body {
     background: transparent url(../images/header-bg.jpg) no-repeat top center;
     background-size: 100% 100%;
     border-bottom: 5px solid rgba(20, 30, 130, 0.5);
-    min-height: 600px;
+    min-height: 640px;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 35px;
-    position: relative;
-    z-index: 1; }
+    padding-top: 35px; }
     body > header::after {
+      content: "\f078";
       display: block;
-      width: 200px;
-      height: 200px;
-      background: #069; }
+      width: 100%;
+      position: absolute;
+      top: 12.5em;
+      left: 0px;
+      animation: updown 10s ease-in-out; }
     body > header > h1 {
       margin: 0;
       font-size: 1.4em; }
@@ -116,7 +134,7 @@ main {
       margin-left: auto;
       margin-right: auto;
       position: relative;
-      top: -210px;
+      top: 0;
       left: 0; }
     main > section > h1 {
       text-align: center;
