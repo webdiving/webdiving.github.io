@@ -11,6 +11,11 @@
 
 }
 
+@keyframes swing {
+    0%{transform: rotate(-3deg)}
+    50%{transform: rotate(3deg)}
+    100%{transform: rotate(-3deg)}
+}
 
 @font-face {
     font-family: 'BebasNeueRegular';
@@ -32,10 +37,12 @@ html, body {
 body {
 	font: 400 1rem "Open Sans", Arial, sans-serif;
 	line-height: 1.8em;
+	color: #125;
 
 	&> header {
 		background: transparent url(../images/header-bg.jpg) no-repeat top center;
 		background-size: 100% 100%;
+        border-bottom: 5px solid rgba(20, 30, 130, 0.5);
 		min-height: 600px;
 		color : #fff;
 		text-transform: uppercase;
@@ -56,10 +63,11 @@ body {
 			font-style: italic;
 		}
 		&> h3 {
-		    font-size: 2.5em;
+		    font-size: 3.5em;
 		    padding-top: 0px;
 		    margin-top: 0px;
 		    margin-bottom: 20px;
+		    font-family: "BebasNeueRegular",Arial,sans-serif;
 		}
 
 		nav {
@@ -92,6 +100,23 @@ body {
 				}
 			}
 		}
+
+		&> a {
+			background: transparent url('../images/early-bird.png') no-repeat top right;
+			display: block;
+			width: 136px;
+			height: 170px;
+			margin: -17px auto auto;
+			border: medium none;
+			text-indent: -3000px;
+		    animation: swing 5s infinite ease-in-out;
+		    transform-origin: center top;
+
+		    &:visited,
+		    &:focus {
+		    	border: none;
+		    }
+		}
 	}
 }
 
@@ -100,15 +125,21 @@ main {
 
 	&> section {
 		padding: 5em 10em;
-
+        & img {
+            width: 25%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: -210px;
+            left: 0;
+        }
 		&> h1 {
 			text-align: center;
-			margin: 1em 0 .2em;
+			margin: 0.3em 0;
 			font-size: 2.2em;
-            position: relative;
-            top: -185px;
-            left: 0;
-            z-index: 0;
+            margin-top: -50px;
 		}
 		&> h2 {
 			text-align: center;
@@ -132,28 +163,28 @@ main {
 
 			}
 			a {
-				color: #125;
+				color: #346;
 				text-decoration: none;
 			}
 
 			.location:before {
 				content: "\f124";
-                color: #36d;
+                color: #125;
 			}
 			.date:before {
 				content: "\f073";
-                color: #36d;
+                color: #125;
 			}
 			.language:before {
 				content: "\f1ab";
-                color: #36d;
+                color: #125;
 			}
 		}
 
 		&> p {
 			margin: 1em 0;
             strong {
-                color: #36d;
+                color: #125;
                 code {
                     text-decoration: underline;
                 }
@@ -189,14 +220,5 @@ main {
 				}
 			}
 		}
-
-		&#html5 {
-			&> h1::before {
-				@extend .head-icon;
-				content: "\f13b";
-                color: rgba(1, 123, 214, 0.95);
-			}
-		}
-
 	}
 }

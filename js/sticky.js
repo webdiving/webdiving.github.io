@@ -4,24 +4,29 @@
 // Creation of sticky html5 logo
 
     // initialisation de la position de base
-    var title = document.querySelector('#html5 > h1');
-    var init = -185;
+    var logo = document.querySelector('#html5 > img');
+    var init = -210;
     var level = 0;
     var total = init+level;
     var position = total+"px";
-    title.setAttribute('style', 'top: '+ position);
+    logo.setAttribute('style', 'top: '+ position);
     
     // var necessaire au calcul du scroll
     var body = document.querySelector('body');
     var html = document.querySelector('html');
-
+    
+    // var necessaire à la detection du click
+    var onglet = document.querySelector('header > nav > a').firstChild;
+    
     // évolution de position en fonction du scroll
     body.onscroll = function () {
         level = html.scrollTop;
         var total = init+level;
         var position = total+"px";
-        if (total < 0)
-            title.setAttribute('style', 'top: '+ position);
+        if (total < -65 )
+            logo.setAttribute('style', 'top: '+ position);
+        else if (total < 65)
+            logo.setAttribute('style', 'top: -65px');
     };
     
 })();
