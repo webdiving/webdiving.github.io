@@ -23,10 +23,10 @@
         level = html.scrollTop;
         var total = init+level;
         var position = total+"px";
-        if (total < -65 )
+        if (total < -40 )
             logo.setAttribute('style', 'top: '+ position);
-        else if (total < 65)
-            logo.setAttribute('style', 'top: -65px');
+        else if (total < 40)
+            logo.setAttribute('style', 'top: -40px');
     };
     
 })();
