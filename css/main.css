@@ -181,8 +181,6 @@ main {
       margin: 1em 0; }
       main > section > p strong {
         color: #2988e6; }
-        main > section > p strong code {
-          text-decoration: underline; }
     main > section nav {
       text-align: center;
       margin: 3em 0 1em; }
