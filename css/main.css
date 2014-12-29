@@ -138,9 +138,9 @@ body {
 main {
   font-size: 1.1em; }
   main > section {
-    padding: 5em 10em; }
+    padding: 3em 10em 5em; }
     main > section img {
-      width: 25%;
+      width: 30%;
       height: auto;
       display: block;
       margin-left: auto;
@@ -150,7 +150,7 @@ main {
       left: 0; }
     main > section > h1 {
       text-align: center;
-      margin: 0.3em 0;
+      margin: -0.3em 0 0.3em;
       font-size: 2.2em; }
     main > section > h2 {
       text-align: center;
