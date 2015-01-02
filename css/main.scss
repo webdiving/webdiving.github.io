@@ -168,7 +168,7 @@ main {
     &> article {
         padding: 3em 10em 5em;
         border-bottom: 5px solid rgba(20, 30, 130, 0.5);
-        
+
         &> img {
             width: 30%;
             height: auto;
@@ -227,6 +227,7 @@ main {
         &> p {
             margin: 1em 0;
             strong {
+                white-space: nowrap;
                 color: #08e;
             }
         }
@@ -262,12 +263,21 @@ main {
         }
     }
     &> section {
-        h1 {
-            margin: 2em 0em;
+        &> h1 {
+            font-weight: normal;
+            font-size: 1em;
+            margin: .3em 0;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin: 0;
             &::before {
+                margin-top: .3em;
                 @extend .head-icon;
                 content: "\f19c";
                 color: #08e;
+                font-size: 2em;
             }
         }
     }
