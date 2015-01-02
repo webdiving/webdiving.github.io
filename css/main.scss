@@ -1,13 +1,13 @@
 .pre-icon {
-	font-family: FontAwesome;
-	margin-right: .5em;
+    font-family: FontAwesome;
+    margin-right: .5em;
 }
 .head-icon {
-	font-family: FontAwesome;
-	padding: 0em 0 .5em;
-	display: block;
-	text-align: center;
-	font-size: 3em;
+    font-family: FontAwesome;
+    padding: 0em 0 .5em;
+    display: block;
+    text-align: center;
+    font-size: 3em;
 
 }
 
@@ -41,132 +41,132 @@
 }
 
 html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 body {
-	font: 400 1rem "Open Sans", Arial, sans-serif;
-	line-height: 1.8em;
-	color: #125;
+    font: 400 1rem "Open Sans", Arial, sans-serif;
+    line-height: 1.8em;
+    color: #125;
 
-	&> header {
-		position: relative;
-		background: transparent url(../images/header-bg.jpg) no-repeat top center;
-		background-size: 100% 100%;
+    &> header {
+        position: relative;
+        background: transparent url(../images/header-bg.jpg) no-repeat top center;
+        background-size: 100% 100%;
         border-bottom: 5px solid rgba(20, 30, 130, 0.5);
-		min-height: 640px;
-		color : #fff;
-		text-transform: uppercase;
-		text-align: center;
-		padding-top: 35px;
-		&> h1 {
-			margin: 0;
-			font-size: 1.4em;
-		}
+        min-height: 640px;
+        color : #fff;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 35px;
+        &> h1 {
+            margin: 0;
+            font-size: 1.4em;
+        }
 
-		&> h2 {
-			font-size: .85em;
-			margin-top: 0;
-			font-weight: 600;
-			font-style: italic;
-		}
-		&> h3 {
-		    font-size: 3.5em;
-		    padding-top: 0px;
-		    margin-top: 0px;
-		    margin-bottom: 20px;
-		    font-family: "BebasNeueRegular",Arial,sans-serif;
-		}
+        &> h2 {
+            font-size: .85em;
+            margin-top: 0;
+            font-weight: 600;
+            font-style: italic;
+        }
+        &> h3 {
+            font-size: 3.5em;
+            padding-top: 0px;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            font-family: "BebasNeueRegular",Arial,sans-serif;
+        }
 
-		nav {
-			margin-top: 90px;
+        nav {
+            margin-top: 90px;
 
-			&> a {
-				display: inline-block;
-				width: 225px;
-				color: #36c;
-				text-decoration: none;
-				font-weight: bold;
-				font-size: 1.1em;
-				vertical-align: middle;
-				font: 1.6em "BebasNeueRegular",Arial,sans-serif;
-				padding: 7px 0;
+            &> a {
+                display: inline-block;
+                width: 225px;
+                color: #36c;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1.1em;
+                vertical-align: middle;
+                font: 1.6em "BebasNeueRegular",Arial,sans-serif;
+                padding: 7px 0;
 
 
-				&:nth-child(1) {
-					background: url(../images/header-nav-left.svg);
-				}
-				&:nth-child(2) {
-					background: url(../images/header-nav-center.svg);
-					width: 313px;
-					margin: 0 -23px;
-					padding: 13px 0;
-					font-size: 2.3em;
-				}
-				&:nth-child(3) {
-					background: url(../images/header-nav-right.svg);
-				}
-			}
-		}
+                &:nth-child(1) {
+                    background: url(../images/header-nav-left.svg);
+                }
+                &:nth-child(2) {
+                    background: url(../images/header-nav-center.svg);
+                    width: 313px;
+                    margin: 0 -23px;
+                    padding: 13px 0;
+                    font-size: 2.3em;
+                }
+                &:nth-child(3) {
+                    background: url(../images/header-nav-right.svg);
+                }
+            }
+        }
 
-		& .early-bird {
-			background: transparent url('../images/early-bird.png') no-repeat top right;
-			display: block;
-			width: 136px;
-			height: 170px;
-			margin: -17px auto auto;
-			border: medium none;
-			text-indent: -3000px;
-		    animation: swing 5s infinite ease-in-out;
-		    transform-origin: center top;
+        & .early-bird {
+            background: transparent url('../images/early-bird.png') no-repeat top right;
+            display: block;
+            width: 136px;
+            height: 170px;
+            margin: -17px auto auto;
+            border: medium none;
+            text-indent: -3000px;
+            animation: swing 5s infinite ease-in-out;
+            transform-origin: center top;
 
-		    &:visited,
-		    &:focus {
-		    	border: none;
-		    }
-		}
-		& .next {
-	            display: block;
-	            width: 60px;
-	            height: 50px;
-	            position: absolute;
-	            text-align: center;
-	            bottom: 0; // adapt the "updown" animation to this value.
-	            color: white;
-	            animation: 10s updown infinite ease-in-out;
-	            overflow: hidden;
-	            margin: 0 auto 2em 0;
-	            padding-left: 50%;
-	            margin-left: -30px;
-	            text-decoration: none;
+            &:visited,
+            &:focus {
+                border: none;
+            }
+        }
+        & .next {
+                display: block;
+                width: 60px;
+                height: 50px;
+                position: absolute;
+                text-align: center;
+                bottom: 0; // adapt the "updown" animation to this value.
+                color: white;
+                animation: 10s updown infinite ease-in-out;
+                overflow: hidden;
+                margin: 0 auto 2em 0;
+                padding-left: 50%;
+                margin-left: -30px;
+                text-decoration: none;
 
-			&:before {
-	            @extend .pre-icon;
-	            content: "\f078";
-	            font-size: 4em;
-	        }
-		}
-	}
+            &:before {
+                @extend .pre-icon;
+                content: "\f078";
+                font-size: 4em;
+            }
+        }
+    }
 
-	&> footer {
-		padding: 2em 0;
-	    background: none repeat scroll 0% 0% rgb(0, 136, 238);
-	    color: #fff;
-	    text-align: center;
+    &> footer {
+        padding: 2em 0;
+        background: none repeat scroll 0% 0% rgb(0, 136, 238);
+        color: #fff;
+        text-align: center;
 
-	    a {
-	    	color: #fff;
-	    }
-	}
+        a {
+            color: #fff;
+        }
+    }
 }
 
 main {
-	font-size: 1.1em;
+    font-size: 1.1em;
 
-	&> section {
-		padding: 3em 10em 5em;
+    &> section {
+        padding: 3em 10em 5em;
         & img {
             width: 30%;
             height: auto;
@@ -177,86 +177,86 @@ main {
             top: 0;
             left: 0;
         }
-		&> h1 {
-			text-align: center;
-			margin: -0.3em 0 0.3em;
-			font-size: 2.2em;
-		}
-		&> h2 {
-			text-align: center;
-			margin: .5em 0 1em;
-			font-weight: normal;
-			font-size: 1.1em;
-		}
+        &> h1 {
+            text-align: center;
+            margin: -0.3em 0 0.3em;
+            font-size: 2.2em;
+        }
+        &> h2 {
+            text-align: center;
+            margin: .5em 0 1em;
+            font-weight: normal;
+            font-size: 1.1em;
+        }
 
-		aside {
-			text-align: center;
-			font-size: 1.2em;
-			padding: .2em 0;
+        aside {
+            text-align: center;
+            font-size: 1.2em;
+            padding: .2em 0;
 
-			.location,
-			.date,
-			.language {
-				margin-right: 2em;
-				&:before {
-					@extend .pre-icon;
-				}
+            .location,
+            .date,
+            .language {
+                margin-right: 2em;
+                &:before {
+                    @extend .pre-icon;
+                }
 
-			}
-			a {
-				color: #125;
-				text-decoration: none;
-			}
+            }
+            a {
+                color: #125;
+                text-decoration: none;
+            }
 
-			.location:before {
-				content: "\f124";
+            .location:before {
+                content: "\f124";
                 color: #2988e6;
-			}
-			.date:before {
-				content: "\f073";
+            }
+            .date:before {
+                content: "\f073";
                 color: #2988e6;
-			}
-			.language:before {
-				content: "\f1ab";
+            }
+            .language:before {
+                content: "\f1ab";
                 color: #2988e6;
-			}
-		}
+            }
+        }
 
-		&> p {
-			margin: 1em 0;
+        &> p {
+            margin: 1em 0;
             strong {
                 color: #2988e6;
             }
-		}
+        }
 
-		nav {
-			text-align: center;
-			margin: 3em 0 1em;
-			a {
-				&.info,
-				&.register {
-					color: #fff;
-					font-size: 1.2em;
-					text-decoration: none;
-					padding: .5em 1em;
-					margin-right: .5em;
-					border-radius: 5px;
-				}
-				&.info {
-					background-color: #08e;
-					&::before {
-						@extend .pre-icon;
-						content: "\f05a";
-					}
-				}
-				&.register {
-					background-color: #6c4;
-					&::before {
-						@extend .pre-icon;
-						content: "\f0a9";
-					}
-				}
-			}
-		}
-	}
+        nav {
+            text-align: center;
+            margin: 3em 0 1em;
+            a {
+                &.info,
+                &.register {
+                    color: #fff;
+                    font-size: 1.2em;
+                    text-decoration: none;
+                    padding: .5em 1em;
+                    margin-right: .5em;
+                    border-radius: 5px;
+                }
+                &.info {
+                    background-color: #08e;
+                    &::before {
+                        @extend .pre-icon;
+                        content: "\f05a";
+                    }
+                }
+                &.register {
+                    background-color: #6c4;
+                    &::before {
+                        @extend .pre-icon;
+                        content: "\f0a9";
+                    }
+                }
+            }
+        }
+    }
 }
