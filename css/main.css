@@ -1,10 +1,12 @@
 .pre-icon, body > header .next:before, main > section aside .location:before,
 main > section aside .date:before,
-main > section aside .language:before, main > section nav a.info::before, main > section nav a.register::before {
+main > section aside .language:before, main > article aside .location:before,
+main > article aside .date:before,
+main > article aside .language:before, main > section nav a.info::before, main > article nav a.info::before, main > section nav a.register::before, main > article nav a.register::before {
   font-family: FontAwesome;
   margin-right: .5em; }
 
-.head-icon {
+.head-icon, main > section h1::before {
   font-family: FontAwesome;
   padding: 0em 0 .5em;
   display: block;
@@ -137,9 +139,10 @@ body {
 
 main {
   font-size: 1.1em; }
-  main > section {
-    padding: 3em 10em 5em; }
-    main > section img {
+  main > section, main > article {
+    padding: 3em 10em 5em;
+    border-bottom: 5px solid rgba(20, 30, 130, 0.5); }
+    main > section > img, main > article > img {
       width: 30%;
       height: auto;
       display: block;
@@ -148,56 +151,63 @@ main {
       position: relative;
       top: 0;
       left: 0; }
-    main > section > h1 {
+    main > section > h1, main > article > h1 {
       text-align: center;
       margin: -0.3em 0 0.3em;
       font-size: 2.2em; }
-    main > section > h2 {
+    main > section > h2, main > article > h2 {
       text-align: center;
       margin: .5em 0 1em;
       font-weight: normal;
       font-size: 1.1em; }
-    main > section aside {
+    main > section aside, main > article aside {
       text-align: center;
       font-size: 1.2em;
       padding: .2em 0; }
       main > section aside .location,
       main > section aside .date,
-      main > section aside .language {
+      main > section aside .language, main > article aside .location,
+      main > article aside .date,
+      main > article aside .language {
         margin-right: 2em; }
-      main > section aside a {
+      main > section aside a, main > article aside a {
         color: #125;
         text-decoration: none; }
-      main > section aside .location:before {
+      main > section aside .location:before, main > article aside .location:before {
         content: "\f124";
         color: #2988e6; }
-      main > section aside .date:before {
+      main > section aside .date:before, main > article aside .date:before {
         content: "\f073";
         color: #2988e6; }
-      main > section aside .language:before {
+      main > section aside .language:before, main > article aside .language:before {
         content: "\f1ab";
         color: #2988e6; }
-    main > section > p {
+    main > section > p, main > article > p {
       margin: 1em 0; }
-      main > section > p strong {
-        color: #2988e6; }
-    main > section nav {
+      main > section > p strong, main > article > p strong {
+        color: #08e; }
+    main > section nav, main > article nav {
       text-align: center;
       margin: 3em 0 1em; }
-      main > section nav a.info, main > section nav a.register {
+      main > section nav a.info, main > section nav a.register, main > article nav a.info, main > article nav a.register {
         color: #fff;
         font-size: 1.2em;
         text-decoration: none;
         padding: .5em 1em;
         margin-right: .5em;
         border-radius: 5px; }
-      main > section nav a.info {
+      main > section nav a.info, main > article nav a.info {
         background-color: #08e; }
-        main > section nav a.info::before {
+        main > section nav a.info::before, main > article nav a.info::before {
           content: "\f05a"; }
-      main > section nav a.register {
+      main > section nav a.register, main > article nav a.register {
         background-color: #6c4; }
-        main > section nav a.register::before {
+        main > section nav a.register::before, main > article nav a.register::before {
           content: "\f0a9"; }
+  main > section h1 {
+    margin: 2em 0em; }
+    main > section h1::before {
+      content: "\f19c";
+      color: #08e; }
 
 /*# sourceMappingURL=main.css.map */
