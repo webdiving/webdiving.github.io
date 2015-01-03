@@ -2,7 +2,7 @@
 main > section aside .date:before,
 main > section aside .language:before, main > article aside .location:before,
 main > article aside .date:before,
-main > article aside .language:before, main > section nav a.info::before, main > article nav a.info::before, main > section nav a.register::before, main > article nav a.register::before {
+main > article aside .language:before, main > section nav a.info::before, main > article nav a.info::before, main > section nav a.register::before, main > article nav a.register::before, #intern main a.info::before, #intern main a.register::before {
   font-family: FontAwesome;
   margin-right: .5em; }
 
@@ -291,15 +291,32 @@ main {
     height: 70px; }
 #intern main {
   font-size: 1.1em;
-  padding: 5em 1em; }
-  #intern main > section, #intern main > article {
-    padding: 3em 10em 5em;
-    border-bottom: 5px solid rgba(20, 30, 130, 0.5); }
+  padding: 8em 5em 2em; }
+  #intern main ol {
+    list-style: none;
+    padding-bottom: 20px; }
+  #intern main a.info, #intern main a.register {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: .5em 1em;
+    margin-right: .5em;
+    border-radius: 5px; }
+  #intern main a.info {
+    background-color: #08e;
+    margin-left: 60px; }
+    #intern main a.info::before {
+      content: "\f019"; }
+  #intern main a.register {
+    background-color: #6c4;
+    margin-left: 15px; }
+    #intern main a.register::before {
+      content: "\f0a9"; }
 #intern > footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  border-top: 5px solid rgba(20, 30, 130, 0.5); }
+  border-top: 2px solid #5FBF00;
+  padding: 0.2em 0; }
 
 /*# sourceMappingURL=main.css.map */
