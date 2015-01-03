@@ -4,7 +4,7 @@
 }
 .head-icon {
     font-family: FontAwesome;
-    padding: 0em 0 .5em;
+    padding: 0 0 .5em;
     display: block;
     text-align: center;
     font-size: 3em;
@@ -280,5 +280,108 @@ main {
                 font-size: 2em;
             }
         }
+    }
+}
+
+// intern pages
+
+#intern {
+    &> header {
+        position: fixed;
+        background-color: #08e;
+        background-image: none;
+        border-bottom: 5px solid #5FBF00;
+        min-height: auto;
+        width: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 0;
+        display: block;
+        &> h1 {
+            margin: 0;
+            font-size: 1.25em;
+            display: inline-block;
+            color: #fff;
+            position: relative;
+            top: -18px;
+            left: 0px;
+        }
+        &> h3 {
+            font-size: 3em;
+            padding-top: 15px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-family: "BebasNeueRegular",Arial,sans-serif;
+            font-weight: 100;
+            display: inline-block;
+            color: #dfd;
+        }
+        nav {
+            display: inline-block;
+            margin-top: 5px;
+            width: 65%;
+            float: right;
+            &> a {
+                display: inline-block;
+                margin: 0 10px;
+                padding: 5px;
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                font: 1.4em "BebasNeueRegular",Arial,sans-serif;
+                max-width: 20%;
+                &:nth-child(1) {
+                    background: none;
+                    &:hover{
+                        background-color: #fff;
+                        color: #5FBF00;
+                    }
+                }
+                &:nth-child(2) {
+                    background: none;
+                    &:hover{
+                        background-color: #fff;
+                        color: #5FBF00;
+                    }
+                }
+                &:nth-child(3) {
+                    background: none;
+                    &:hover{
+                        background-color: #fff;
+                        color: #5FBF00;
+                    }
+                }
+            }
+        }
+        &> a {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 700;
+            position: absolute;
+            top: 105%;
+            left: 85%;
+            background: url("../images/header-register.svg") repeat scroll 0% 0% transparent;
+            width: 175px;
+            padding: 15px 0 0 0;
+            height: 70px;
+        }
+    }
+    main {
+        font-size: 1.1em;
+        padding: 5em 1em;
+        &> section,
+        &> article {
+            padding: 3em 10em 5em;
+            border-bottom: 5px solid rgba(20, 30, 130, 0.5);
+        }
+    }
+    &> footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 5px solid rgba(20, 30, 130, 0.5)
     }
 }
