@@ -39,6 +39,23 @@ main > article aside .language:before, main > section nav a.info::before, main >
     bottom: 0; }
   100% {
     bottom: 0; } }
+@keyframes ponyfly {
+  0% {
+    top: 100%; }
+  50% {
+    top: 10%; }
+  65% {
+    top: 13%; }
+  80% {
+    transform: rotate(26deg); }
+  85% {
+    transform: rotate(28deg); }
+  90% {
+    transform: rotate(30deg); }
+  95% {
+    transform: rotate(28deg); }
+  100% {
+    transform: rotate(26deg); } }
 @font-face {
   font-family: 'BebasNeueRegular';
   src: url("../fonts/BebasNeue-webfont.eot");
@@ -246,7 +263,7 @@ main {
     font-family: "BebasNeueRegular",Arial,sans-serif;
     font-weight: 100;
     display: inline-block;
-    color: #dfd; }
+    color: #5FBF00; }
   #intern > header nav {
     display: inline-block;
     margin-top: 5px;
@@ -260,7 +277,7 @@ main {
       text-decoration: none;
       font-weight: bold;
       font: 1.4em "BebasNeueRegular",Arial,sans-serif;
-      max-width: 20%; }
+      width: 15%; }
       #intern > header nav > a:nth-child(1) {
         background: none; }
         #intern > header nav > a:nth-child(1):hover {
@@ -276,6 +293,11 @@ main {
         #intern > header nav > a:nth-child(3):hover {
           background-color: #fff;
           color: #5FBF00; }
+      #intern > header nav > a:nth-child(4) {
+        background: none; }
+        #intern > header nav > a:nth-child(4):hover {
+          background-color: #fff;
+          color: #5FBF00; }
   #intern > header > a {
     color: #fff;
     display: block;
@@ -283,12 +305,15 @@ main {
     font-size: 1.3em;
     font-weight: 700;
     position: absolute;
-    top: 105%;
+    top: 101%;
     left: 85%;
     background: url("../images/header-register.svg") repeat scroll 0% 0% transparent;
     width: 175px;
     padding: 15px 0 0 0;
-    height: 70px; }
+    height: 70px;
+    transition: all 0.4s ease-in; }
+    #intern > header > a:hover {
+      top: 106%; }
 #intern main {
   font-size: 1.1em;
   padding: 8em 5em 2em; }
@@ -318,5 +343,12 @@ main {
   width: 100%;
   border-top: 2px solid #5FBF00;
   padding: 0.2em 0; }
+  #intern > footer img {
+    animation: ponyfly 5s ease-in;
+    transform-origin: center top;
+    position: absolute;
+    left: 65%;
+    top: 13%;
+    transform: rotate(26deg); }
 
 /*# sourceMappingURL=main.css.map */
