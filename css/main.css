@@ -247,7 +247,11 @@ main {
     text-align: center;
     display: block;
     transform: rotate(15deg);
+<<<<<<< HEAD
     color: #550046;
+=======
+    color: #FFC7F2;
+>>>>>>> ee830acedbe413c87e38eff5a388d3001bd09d6c
     font-weight: bold;
     font-size: 1em;
     line-height: 1.2em; }
