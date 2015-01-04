@@ -291,6 +291,24 @@ main {
             }
         }
     }
+    &> article {
+        &> a {
+            text-decoration: none;
+            position: absolute;
+            top: 180%;
+            left: 75%;
+            background: url("../images/macaron.svg") repeat scroll 0% 0% transparent;
+            width: 17%;
+            padding: 30px 0px;
+            height: 109px;
+            text-align: center;
+            display: block;
+            transform: rotate(15deg);
+            color: #2D6862;
+            font-weight: bold;
+            font-size: 17px;
+        }
+    }
 }
 
 // intern pages
