@@ -203,6 +203,8 @@ main {
       main > section > p strong, main > article > p strong {
         white-space: nowrap;
         color: #08e; }
+    main > section blockquote, main > article blockquote {
+      text-align: center; }
     main > section nav, main > article nav {
       text-align: center;
       margin: 3em 0 1em; }
