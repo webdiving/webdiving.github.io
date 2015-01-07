@@ -64,7 +64,6 @@ body {
         position: relative;
         background: transparent url(../images/header-bg.jpg) no-repeat top center;
         background-size: 100% 100%;
-        border-bottom: 5px solid rgba(20, 30, 130, 0.5);
         min-height: 640px;
         color : #fff;
         text-transform: uppercase;
@@ -177,7 +176,7 @@ main {
     &> section,
     &> article {
         padding: 3em 10em 5em;
-        border-bottom: 5px solid rgba(20, 30, 130, 0.5);
+        border-bottom: 1px dashed #ddd;
 
         &> img {
             width: 30%;
@@ -273,6 +272,12 @@ main {
         }
     }
     &> section {
+        &:nth-child(even) {
+            background-color: #fff;
+        }
+        &:nth-child(odd) {
+            background-color: #f6f6f6;
+        }
         &> h1 {
             font-weight: normal;
             font-size: 1em;
