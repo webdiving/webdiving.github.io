@@ -338,17 +338,18 @@ main {
 
 #intern {
     &> header {
-        position: relative;
+        position: fixed;
         background: none;
         min-height: 20px;
         color : #111;
         text-transform: none;
         text-align: left;
-        padding: 20px 30px;
+        padding: 10px 0;
         border-bottom: 1px dashed #ddd;
         background-color: #f6f6f6;
+        width: 100%;
         nav {
-            margin: 0;
+            margin: 0px 20px;
             a {
                 @extend .blue-color;
                 display: inline-block;
@@ -393,9 +394,10 @@ main {
             h1 {
                 @extend .blue-color;
                 font: 1.6em "BebasNeueRegular",Arial,sans-serif;
+                margin-top: 2.5em;
             }
-            p {
-                margin-bottom: 3em;
+            nav {
+                margin: 5em 0px 0em;
             }
         }
     }
