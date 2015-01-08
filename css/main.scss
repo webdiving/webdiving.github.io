@@ -217,7 +217,7 @@ main {
             text-align: center;
             font-size: 1.2em;
             padding: .2em 0;
-
+            margin-top: -180px;
             .location,
             .date,
             .language {
@@ -311,8 +311,8 @@ main {
         &> a {
             text-decoration: none;
             position: absolute;
-            top: 180%;
-            left: 75%;
+            top: -180px;
+            left: 80%;
             background: url("../images/badge.png") no-repeat scroll 0% 0% transparent;
             width: 140px;
             height: 140px;
@@ -324,7 +324,7 @@ main {
             font-weight: bold;
             font-size: 1em;
             line-height: 1.2em;
-
+            position: relative;
             .price {
                 font-size: 2em;
                 display: block;
