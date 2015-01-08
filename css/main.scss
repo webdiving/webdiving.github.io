@@ -350,7 +350,7 @@ main {
         width: 100%;
         nav {
             margin: 0px 20px;
-            a {
+            &> a {
                 @extend .blue-color;
                 display: inline-block;
                 width: 145px;
@@ -391,13 +391,20 @@ main {
     }
     &> main {
         section {
-            h1 {
+            h1,
+            h2 {
                 @extend .blue-color;
                 font: 1.6em "BebasNeueRegular",Arial,sans-serif;
                 margin-top: 2.5em;
+                &:before {
+                    display: none;
+                }
             }
             nav {
                 margin: 5em 0px 0em;
+            }
+            ol {
+            list-style: none;
             }
         }
     }

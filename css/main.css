@@ -2,7 +2,7 @@
 main > section aside .date:before,
 main > section aside .language:before, main > article aside .location:before,
 main > article aside .date:before,
-main > article aside .language:before, main > section nav a.info::before, main > article nav a.info::before, main > section nav a.register::before, main > article nav a.register::before, #intern > header nav a:first-child:before, #intern > header nav a:last-child:after {
+main > article aside .language:before, main > section nav a.info::before, main > article nav a.info::before, main > section nav a.register::before, main > article nav a.register::before, #intern > header nav > a:first-child:before, #intern > header nav > a:last-child:after {
   font-family: FontAwesome;
   margin-right: .5em; }
 
@@ -13,7 +13,8 @@ main > article aside .language:before, main > section nav a.info::before, main >
   text-align: center;
   font-size: 3em; }
 
-.blue-color, body > header nav > a, main > section aside .location:before, main > article aside .location:before, main > section aside .date:before, main > article aside .date:before, main > section aside .language:before, main > article aside .language:before, main > section > p strong, main > article > p strong, main > section h2::before, #intern > header nav a, #intern > main section h1 {
+.blue-color, body > header nav > a, main > section aside .location:before, main > article aside .location:before, main > section aside .date:before, main > article aside .date:before, main > section aside .language:before, main > article aside .language:before, main > section > p strong, main > article > p strong, main > section h2::before, #intern > header nav > a, #intern > main section h1,
+#intern > main section h2 {
   color: #36c; }
 
 .green-color {
@@ -276,7 +277,7 @@ main {
   width: 100%; }
   #intern > header nav {
     margin: 0px 20px; }
-    #intern > header nav a {
+    #intern > header nav > a {
       display: inline-block;
       width: 145px;
       text-decoration: none;
@@ -285,19 +286,19 @@ main {
       vertical-align: none;
       font: 1.6em "BebasNeueRegular",Arial,sans-serif;
       padding: 7px 0; }
-      #intern > header nav a:first-child {
+      #intern > header nav > a:first-child {
         background: none; }
-        #intern > header nav a:first-child:before {
+        #intern > header nav > a:first-child:before {
           content: "\f078";
           font-size: 0.9em;
           transform: rotate(90deg);
           display: inline-block;
           width: 30px;
           height: 30px; }
-      #intern > header nav a:last-child {
+      #intern > header nav > a:last-child {
         background: none;
         float: right; }
-        #intern > header nav a:last-child:after {
+        #intern > header nav > a:last-child:after {
           content: "\f078";
           font-size: 0.9em;
           transform: rotate(270deg);
@@ -305,10 +306,16 @@ main {
           width: 15px;
           height: 30px;
           margin-left: 20px; }
-#intern > main section h1 {
+#intern > main section h1,
+#intern > main section h2 {
   font: 1.6em "BebasNeueRegular",Arial,sans-serif;
   margin-top: 2.5em; }
+  #intern > main section h1:before,
+  #intern > main section h2:before {
+    display: none; }
 #intern > main section nav {
   margin: 5em 0px 0em; }
+#intern > main section ol {
+  list-style: none; }
 
 /*# sourceMappingURL=main.css.map */
