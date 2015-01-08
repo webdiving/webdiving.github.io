@@ -13,6 +13,12 @@ main > article aside .language:before, main > section nav a.info::before, main >
   text-align: center;
   font-size: 3em; }
 
+.blue-color, body > header nav > a, main > section aside .location:before, main > article aside .location:before, main > section aside .date:before, main > article aside .date:before, main > section aside .language:before, main > article aside .language:before, main > section > p strong, main > article > p strong, main > section h2::before, #intern > header nav a, #intern > main section h1 {
+  color: #36c; }
+
+.green-color {
+  color: #3c6; }
+
 @keyframes swing {
   0% {
     transform: rotate(-3deg); }
@@ -75,7 +81,7 @@ body {
     position: relative;
     background: transparent url(../images/header-bg.jpg) no-repeat top center;
     background-size: 100% 100%;
-    min-height: 640px;
+    min-height: 655px;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -99,7 +105,6 @@ body {
       body > header nav > a {
         display: inline-block;
         width: 225px;
-        color: #36c;
         text-decoration: none;
         font-weight: bold;
         font-size: 1.1em;
@@ -147,7 +152,7 @@ body {
         font-size: 3.5em; }
   body > footer {
     padding: 2em 0;
-    background: none repeat scroll 0% 0% #0088ee;
+    background-color: #36c;
     color: #fff;
     text-align: center; }
     body > footer a {
@@ -194,19 +199,15 @@ main {
         color: #125;
         text-decoration: none; }
       main > section aside .location:before, main > article aside .location:before {
-        content: "\f124";
-        color: #2988e6; }
+        content: "\f124"; }
       main > section aside .date:before, main > article aside .date:before {
-        content: "\f073";
-        color: #2988e6; }
+        content: "\f073"; }
       main > section aside .language:before, main > article aside .language:before {
-        content: "\f1ab";
-        color: #2988e6; }
+        content: "\f1ab"; }
     main > section > p, main > article > p {
       margin: 1em 0; }
       main > section > p strong, main > article > p strong {
-        white-space: nowrap;
-        color: #08e; }
+        white-space: nowrap; }
     main > section blockquote, main > article blockquote {
       text-align: center; }
     main > section nav, main > article nav {
@@ -220,11 +221,11 @@ main {
         margin-right: .5em;
         border-radius: 5px; }
       main > section nav a.info, main > article nav a.info {
-        background-color: #08e; }
+        background-color: #36c; }
         main > section nav a.info::before, main > article nav a.info::before {
           content: "\f05a"; }
       main > section nav a.register, main > article nav a.register {
-        background-color: #6c4; }
+        background-color: #3c6; }
         main > section nav a.register::before, main > article nav a.register::before {
           content: "\f0a9"; }
   main > section > h1 {
@@ -238,7 +239,6 @@ main {
     main > section h2::before {
       margin-top: .3em;
       content: "\f19c";
-      color: #08e;
       font-size: 2em; }
   main > article > a {
     text-decoration: none;
@@ -275,8 +275,7 @@ main {
     margin: 0; }
     #intern > header nav a {
       display: inline-block;
-      width: 225px;
-      color: #36c;
+      width: 145px;
       text-decoration: none;
       font-weight: none;
       font-size: 1.1em;
@@ -304,8 +303,7 @@ main {
           height: 30px;
           margin-left: 20px; }
 #intern > main section h1 {
-  font: 1.6em "BebasNeueRegular",Arial,sans-serif;
-  color: #36C; }
+  font: 1.6em "BebasNeueRegular",Arial,sans-serif; }
 #intern > main section p {
   margin-bottom: 3em; }
 

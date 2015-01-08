@@ -9,6 +9,13 @@
     text-align: center;
     font-size: 3em;
 }
+.blue-color {
+    color: #36c;
+}
+.green-color {
+    color: #3c6;   
+}
+
 
 @keyframes swing {
     0%{transform: rotate(-3deg)}
@@ -64,7 +71,7 @@ body {
         position: relative;
         background: transparent url(../images/header-bg.jpg) no-repeat top center;
         background-size: 100% 100%;
-        min-height: 640px;
+        min-height: 655px;
         color : #fff;
         text-transform: uppercase;
         text-align: center;
@@ -92,9 +99,9 @@ body {
             margin-top: 90px;
 
             &> a {
+                @extend .blue-color;
                 display: inline-block;
                 width: 225px;
-                color: #36c;
                 text-decoration: none;
                 font-weight: bold;
                 font-size: 1.1em;
@@ -160,7 +167,7 @@ body {
 
     &> footer {
         padding: 2em 0;
-        background: none repeat scroll 0% 0% rgb(0, 136, 238);
+        background-color: #36c;
         color: #fff;
         text-align: center;
 
@@ -227,15 +234,15 @@ main {
 
             .location:before {
                 content: "\f124";
-                color: #2988e6;
+                @extend .blue-color;
             }
             .date:before {
                 content: "\f073";
-                color: #2988e6;
+                @extend .blue-color;
             }
             .language:before {
                 content: "\f1ab";
-                color: #2988e6;
+                @extend .blue-color;
             }
         }
 
@@ -243,7 +250,7 @@ main {
             margin: 1em 0;
             strong {
                 white-space: nowrap;
-                color: #08e;
+                @extend .blue-color;
             }
         }
         
@@ -265,14 +272,14 @@ main {
                     border-radius: 5px;
                 }
                 &.info {
-                    background-color: #08e;
+                    background-color: #36c;
                     &::before {
                         @extend .pre-icon;
                         content: "\f05a";
                     }
                 }
                 &.register {
-                    background-color: #6c4;
+                    background-color: #3c6;
                     &::before {
                         @extend .pre-icon;
                         content: "\f0a9";
@@ -292,10 +299,10 @@ main {
             font-size: 2.2em;
             margin: 0;
             &::before {
-                margin-top: .3em;
                 @extend .head-icon;
+                @extend .blue-color;
+                margin-top: .3em;  
                 content: "\f19c";
-                color: #08e;
                 font-size: 2em;
             }
         }
@@ -343,9 +350,9 @@ main {
         nav {
             margin: 0;
             a {
+                @extend .blue-color;
                 display: inline-block;
-                width: 225px;
-                color: #36c;
+                width: 145px;
                 text-decoration: none;
                 font-weight: none;
                 font-size: 1.1em;
@@ -384,8 +391,8 @@ main {
     &> main {
         section {
             h1 {
+                @extend .blue-color;
                 font: 1.6em "BebasNeueRegular",Arial,sans-serif;
-                color: #36C;
             }
             p {
                 margin-bottom: 3em;
