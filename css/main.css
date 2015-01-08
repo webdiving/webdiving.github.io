@@ -2,7 +2,7 @@
 main > section aside .date:before,
 main > section aside .language:before, main > article aside .location:before,
 main > article aside .date:before,
-main > article aside .language:before, main > section nav a.info::before, main > article nav a.info::before, main > section nav a.register::before, main > article nav a.register::before, #intern main a.info::before, #intern main a.register::before {
+main > article aside .language:before, main > section nav a.info::before, main > article nav a.info::before, main > section nav a.register::before, main > article nav a.register::before, #intern > header nav a:first-child:before, #intern > header nav a:last-child:after {
   font-family: FontAwesome;
   margin-right: .5em; }
 
@@ -130,7 +130,7 @@ body {
         border: none; }
     body > header .next {
       display: block;
-      width: 60px;
+      width: 55px;
       height: 50px;
       position: absolute;
       text-align: center;
@@ -144,7 +144,7 @@ body {
       text-decoration: none; }
       body > header .next:before {
         content: "\f078";
-        font-size: 4em; }
+        font-size: 3.5em; }
   body > footer {
     padding: 2em 0;
     background: none repeat scroll 0% 0% #0088ee;
@@ -158,6 +158,10 @@ main {
   main > section, main > article {
     padding: 3em 10em 5em;
     border-bottom: 1px dashed #ddd; }
+    main > section:nth-child(even), main > article:nth-child(even) {
+      background-color: #fff; }
+    main > section:nth-child(odd), main > article:nth-child(odd) {
+      background-color: #f6f6f6; }
     main > section > img, main > article > img {
       width: 30%;
       height: auto;
@@ -223,10 +227,6 @@ main {
         background-color: #6c4; }
         main > section nav a.register::before, main > article nav a.register::before {
           content: "\f0a9"; }
-  main > section:nth-child(even) {
-    background-color: #fff; }
-  main > section:nth-child(odd) {
-    background-color: #f6f6f6; }
   main > section > h1 {
     font-weight: normal;
     font-size: 1em;
@@ -262,118 +262,51 @@ main {
       margin: .3em 0; }
 
 #intern > header {
-  position: fixed;
-  background-color: #08e;
-  background-image: none;
-  border-bottom: 5px solid #5FBF00;
-  min-height: auto;
-  width: 100%;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 10px 0;
-  display: block; }
-  #intern > header > h1 {
-    margin: 0;
-    font-size: 1.25em;
-    display: inline-block;
-    color: #fff;
-    position: relative;
-    top: -18px;
-    left: 0px; }
-  #intern > header > h3 {
-    font-size: 3em;
-    padding-top: 15px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-family: "BebasNeueRegular",Arial,sans-serif;
-    font-weight: 100;
-    display: inline-block;
-    color: #5FBF00; }
+  position: relative;
+  background: none;
+  min-height: 20px;
+  color: #111;
+  text-transform: none;
+  text-align: left;
+  padding: 20px 30px;
+  border-bottom: 1px dashed #ddd;
+  background-color: #f6f6f6; }
   #intern > header nav {
-    display: inline-block;
-    margin-top: 5px;
-    width: 65%;
-    float: right; }
-    #intern > header nav > a {
+    margin: 0; }
+    #intern > header nav a {
       display: inline-block;
-      margin: 0 10px;
-      padding: 5px;
-      color: #fff;
+      width: 225px;
+      color: #36c;
       text-decoration: none;
-      font-weight: bold;
-      font: 1.4em "BebasNeueRegular",Arial,sans-serif;
-      width: 15%; }
-      #intern > header nav > a:nth-child(1) {
+      font-weight: none;
+      font-size: 1.1em;
+      vertical-align: none;
+      font: 1.6em "BebasNeueRegular",Arial,sans-serif;
+      padding: 7px 0; }
+      #intern > header nav a:first-child {
         background: none; }
-        #intern > header nav > a:nth-child(1):hover {
-          background-color: #fff;
-          color: #5FBF00; }
-      #intern > header nav > a:nth-child(2) {
-        background: none; }
-        #intern > header nav > a:nth-child(2):hover {
-          background-color: #fff;
-          color: #5FBF00; }
-      #intern > header nav > a:nth-child(3) {
-        background: none; }
-        #intern > header nav > a:nth-child(3):hover {
-          background-color: #fff;
-          color: #5FBF00; }
-      #intern > header nav > a:nth-child(4) {
-        background: none; }
-        #intern > header nav > a:nth-child(4):hover {
-          background-color: #fff;
-          color: #5FBF00; }
-  #intern > header > a {
-    color: #fff;
-    display: block;
-    text-decoration: none;
-    font-size: 1.3em;
-    font-weight: 700;
-    position: absolute;
-    top: 101%;
-    left: 85%;
-    background: url("../images/header-register.svg") repeat scroll 0% 0% transparent;
-    width: 175px;
-    padding: 15px 0 0 0;
-    height: 70px;
-    transition: all 0.4s ease-in; }
-    #intern > header > a:hover {
-      top: 106%; }
-#intern main {
-  font-size: 1.1em;
-  padding: 8em 5em 2em; }
-  #intern main ol {
-    list-style: none;
-    padding-bottom: 20px; }
-  #intern main a.info, #intern main a.register {
-    color: #fff;
-    font-size: 1.2em;
-    text-decoration: none;
-    padding: .1em 1em;
-    margin-right: .5em;
-    border-radius: 5px; }
-  #intern main a.info {
-    background-color: #08e;
-    margin-left: 60px; }
-    #intern main a.info::before {
-      content: "\f019"; }
-  #intern main a.register {
-    background-color: #6c4;
-    margin-left: 15px; }
-    #intern main a.register::before {
-      content: "\f0a9"; }
-#intern > footer {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-top: 2px solid #5FBF00;
-  padding: 0.2em 0; }
-  #intern > footer img {
-    animation: ponyfly 5s ease-in;
-    transform-origin: center top;
-    position: absolute;
-    left: 65%;
-    top: 13%;
-    transform: rotate(26deg); }
+        #intern > header nav a:first-child:before {
+          content: "\f078";
+          font-size: 0.9em;
+          transform: rotate(90deg);
+          display: inline-block;
+          width: 30px;
+          height: 30px; }
+      #intern > header nav a:last-child {
+        background: none;
+        float: right; }
+        #intern > header nav a:last-child:after {
+          content: "\f078";
+          font-size: 0.9em;
+          transform: rotate(270deg);
+          display: inline-block;
+          width: 15px;
+          height: 30px;
+          margin-left: 20px; }
+#intern > main section h1 {
+  font: 1.6em "BebasNeueRegular",Arial,sans-serif;
+  color: #36C; }
+#intern > main section p {
+  margin-bottom: 3em; }
 
 /*# sourceMappingURL=main.css.map */

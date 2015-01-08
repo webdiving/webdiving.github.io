@@ -137,7 +137,7 @@ body {
         }
         & .next {
                 display: block;
-                width: 60px;
+                width: 55px;
                 height: 50px;
                 position: absolute;
                 text-align: center;
@@ -153,7 +153,7 @@ body {
             &:before {
                 @extend .pre-icon;
                 content: "\f078";
-                font-size: 4em;
+                font-size: 3.5em;
             }
         }
     }
@@ -177,6 +177,12 @@ main {
     &> article {
         padding: 3em 10em 5em;
         border-bottom: 1px dashed #ddd;
+        &:nth-child(even) {
+            background-color: #fff;
+        }
+        &:nth-child(odd) {
+            background-color: #f6f6f6;
+        }
 
         &> img {
             width: 30%;
@@ -276,12 +282,6 @@ main {
         }
     }
     &> section {
-        &:nth-child(even) {
-            background-color: #fff;
-        }
-        &:nth-child(odd) {
-            background-color: #f6f6f6;
-        }
         &> h1 {
             font-weight: normal;
             font-size: 1em;
@@ -331,146 +331,65 @@ main {
 
 #intern {
     &> header {
-        position: fixed;
-        background-color: #08e;
-        background-image: none;
-        border-bottom: 5px solid #5FBF00;
-        min-height: auto;
-        width: 100%;
-        text-transform: uppercase;
-        text-align: center;
-        padding: 10px 0;
-        display: block;
-        &> h1 {
-            margin: 0;
-            font-size: 1.25em;
-            display: inline-block;
-            color: #fff;
-            position: relative;
-            top: -18px;
-            left: 0px;
-        }
-        &> h3 {
-            font-size: 3em;
-            padding-top: 15px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            font-family: "BebasNeueRegular",Arial,sans-serif;
-            font-weight: 100;
-            display: inline-block;
-            color: #5FBF00;
-        }
+        position: relative;
+        background: none;
+        min-height: 20px;
+        color : #111;
+        text-transform: none;
+        text-align: left;
+        padding: 20px 30px;
+        border-bottom: 1px dashed #ddd;
+        background-color: #f6f6f6;
         nav {
-            display: inline-block;
-            margin-top: 5px;
-            width: 65%;
-            float: right;
-            &> a {
+            margin: 0;
+            a {
                 display: inline-block;
-                margin: 0 10px;
-                padding: 5px;
-                color: #fff;
+                width: 225px;
+                color: #36c;
                 text-decoration: none;
-                font-weight: bold;
-                font: 1.4em "BebasNeueRegular",Arial,sans-serif;
-                width: 15%;
-                &:nth-child(1) {
+                font-weight: none;
+                font-size: 1.1em;
+                vertical-align: none;
+                font: 1.6em "BebasNeueRegular",Arial,sans-serif;
+                padding: 7px 0;
+                &:first-child {
                     background: none;
-                    &:hover{
-                        background-color: #fff;
-                        color: #5FBF00;
+                    &:before {
+                        @extend .pre-icon;
+                        content: "\f078";
+                        font-size: 0.9em;
+                        transform: rotate(90deg);
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
                     }
                 }
-                &:nth-child(2) {
+                &:last-child {
                     background: none;
-                    &:hover{
-                        background-color: #fff;
-                        color: #5FBF00;
+                    float: right;
+                    &:after {
+                        @extend .pre-icon;
+                        content: "\f078";
+                        font-size: 0.9em;
+                        transform: rotate(270deg);
+                        display: inline-block;
+                        width: 15px;
+                        height: 30px;
+                        margin-left: 20px;
                     }
-                }
-                &:nth-child(3) {
-                    background: none;
-                    &:hover{
-                        background-color: #fff;
-                        color: #5FBF00;
-                    }
-                }
-                &:nth-child(4) {
-                    background: none;
-                    &:hover{
-                        background-color: #fff;
-                        color: #5FBF00;
-                    }
-                }
-            }
-        }
-        &> a {
-            color: #fff;
-            display: block;
-            text-decoration: none;
-            font-size: 1.3em;
-            font-weight: 700;
-            position: absolute;
-            top: 101%;
-            left: 85%;
-            background: url("../images/header-register.svg") repeat scroll 0% 0% transparent;
-            width: 175px;
-            padding: 15px 0 0 0;
-            height: 70px;
-            transition: all 0.4s ease-in;
-            &:hover {
-                top: 106%;
-            }
-        }
-    }
-    main {
-        font-size: 1.1em;
-        padding: 8em 5em 2em;
-        ol {
-            list-style: none;
-            padding-bottom: 20px;
-        }
-        a {
-            &.info,
-            &.register {
-                color: #fff;
-                font-size: 1.2em;
-                text-decoration: none;
-                padding: .1em 1em;
-                margin-right: .5em;
-                border-radius: 5px;
-            }
-            &.info {
-                background-color: #08e;
-                margin-left: 60px;
-                &::before {
-                    @extend .pre-icon;
-                    content: "\f019";
-                }
-            }
-            &.register {
-                background-color: #6c4;
-                margin-left: 15px;
-                &::before {
-                    @extend .pre-icon;
-                    content: "\f0a9";
                 }
             }
         }
     }
-    &> footer {
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        border-top: 2px solid #5FBF00;
-        padding: 0.2em 0;
-        img {
-            animation: ponyfly 5s ease-in;
-            transform-origin: center top;
-            position: absolute;
-            left: 65%;
-            top: 13%;
-            transform: rotate(26deg);
+    &> main {
+        section {
+            h1 {
+                font: 1.6em "BebasNeueRegular",Arial,sans-serif;
+                color: #36C;
+            }
+            p {
+                margin-bottom: 3em;
+            }
         }
     }
 }
