@@ -2,7 +2,7 @@
 main > section aside .date:before,
 main > section aside .language:before, main > article aside .location:before,
 main > article aside .date:before,
-main > article aside .language:before, main > section nav a.info::before, main > article nav a.info::before, main > section nav a.register::before, main > article nav a.register::before, #intern > header nav > a:first-child:before, #intern > header nav > a:last-child:after {
+main > article aside .language:before, main > section nav a.info::before, main > article nav a.info::before, main > section nav a.register::before, main > article nav a.register::before, main > section nav a.download::before, main > article nav a.download::before, #intern > header nav > a:first-child:before, #intern > header nav > a:last-child:after {
   font-family: FontAwesome;
   margin-right: .5em; }
 
@@ -198,7 +198,7 @@ main {
     main > section nav, main > article nav {
       text-align: center;
       margin: 3em 0 1em; }
-      main > section nav a.info, main > section nav a.register, main > article nav a.info, main > article nav a.register {
+      main > section nav a.info, main > section nav a.register, main > section nav a.download, main > article nav a.info, main > article nav a.register, main > article nav a.download {
         color: #fff;
         font-size: 1.2em;
         text-decoration: none;
@@ -213,6 +213,10 @@ main {
         background-color: #3c6; }
         main > section nav a.register::before, main > article nav a.register::before {
           content: "\f0a9"; }
+      main > section nav a.download, main > article nav a.download {
+        background-color: #36c; }
+        main > section nav a.download::before, main > article nav a.download::before {
+          content: "\f019"; }
   main > section > h1 {
     font-weight: normal;
     font-size: 1em;

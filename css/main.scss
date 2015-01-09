@@ -253,7 +253,8 @@ main {
             margin: 3em 0 1em;
             a {
                 &.info,
-                &.register {
+                &.register,
+                &.download {
                     color: #fff;
                     font-size: 1.2em;
                     text-decoration: none;
@@ -273,6 +274,13 @@ main {
                     &::before {
                         @extend .pre-icon;
                         content: "\f0a9";
+                    }
+                }
+                &.download {
+                    background-color: #36c;
+                    &::before {
+                        @extend .pre-icon;
+                        content: "\f019";
                     }
                 }
             }
