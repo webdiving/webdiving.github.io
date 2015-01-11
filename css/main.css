@@ -20,13 +20,46 @@ main > article aside .language:before, main > section nav a.info::before, main >
 .green-color {
   color: #3c6; }
 
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg); }
+  50% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg); }
+  100% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg); } }
+
 @keyframes swing {
   0% {
-    transform: rotate(-3deg); }
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg); }
   50% {
-    transform: rotate(3deg); }
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg); }
   100% {
-    transform: rotate(-3deg); } }
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg); } }
+@-webkit-keyframes updown {
+  0% {
+    bottom: 0; }
+  40% {
+    bottom: 0; }
+  42% {
+    bottom: -2em; }
+  44% {
+    bottom: 0; }
+  46% {
+    bottom: -2em; }
+  48% {
+    bottom: 0; }
+  50% {
+    bottom: -2em; }
+  52% {
+    bottom: 0; }
+  100% {
+    bottom: 0; } }
 @keyframes updown {
   0% {
     bottom: 0; }
@@ -113,19 +146,23 @@ body {
       margin: -17px auto auto;
       border: medium none;
       text-indent: -3000px;
-      animation: swing 5s infinite ease-in-out;
-      transform-origin: center top; }
+      -webkit-animation: swing 5s infinite ease-in-out;
+              animation: swing 5s infinite ease-in-out;
+      -webkit-transform-origin: center top;
+          -ms-transform-origin: center top;
+              transform-origin: center top; }
       body > header .early-bird:visited, body > header .early-bird:focus {
         border: none; }
     body > header .next {
       display: block;
       width: 55px;
-      height: 50px;
+      height: 40px;
       position: absolute;
       text-align: center;
       bottom: 0;
       color: white;
-      animation: 10s updown infinite ease-in-out;
+      -webkit-animation: 10s updown infinite ease-in-out;
+              animation: 10s updown infinite ease-in-out;
       overflow: hidden;
       margin: 0 auto 2em 0;
       padding-left: 50%;
@@ -240,7 +277,9 @@ main {
     padding: 2em 1.8em 2em 1.8em;
     text-align: center;
     display: block;
-    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+            transform: rotate(15deg);
     color: #FFC7F2;
     font-weight: bold;
     font-size: 1em;
@@ -278,7 +317,9 @@ main {
         #intern > header nav > a:first-child:before {
           content: "\f078";
           font-size: 0.9em;
-          transform: rotate(90deg);
+          -webkit-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+                  transform: rotate(90deg);
           display: inline-block;
           width: 30px;
           height: 30px; }
@@ -288,7 +329,9 @@ main {
         #intern > header nav > a:last-child:after {
           content: "\f078";
           font-size: 0.9em;
-          transform: rotate(270deg);
+          -webkit-transform: rotate(270deg);
+              -ms-transform: rotate(270deg);
+                  transform: rotate(270deg);
           display: inline-block;
           width: 15px;
           height: 30px;
@@ -304,5 +347,3 @@ main {
   margin: 5em 0px 0em; }
 #intern > main section ol {
   list-style: none; }
-
-/*# sourceMappingURL=main.css.map */
