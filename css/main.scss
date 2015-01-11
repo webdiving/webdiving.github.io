@@ -16,7 +16,6 @@
     color: #3c6;   
 }
 
-
 @keyframes swing {
     0%{transform: rotate(-3deg)}
     50%{transform: rotate(3deg)}
@@ -182,7 +181,7 @@ main {
         }
 
         &> img {
-            width: 30%;
+            width: 270px;
             height: auto;
             display: block;
             margin-left: auto;
@@ -403,6 +402,196 @@ main {
             }
             ol {
             list-style: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 821px) and (max-width: 1020px) {
+// From touchscreen tablet To small laptop. 
+
+    body {
+        &> main {
+            &> section,
+            &> article {
+                padding: 3em 4em;
+            }
+
+            &> article {
+                &> a {
+                    top: -215px;
+                    left: 77%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 820px) { 
+// From smartphone To touchscreen tablet. 
+    
+    body {
+        &> header {
+            min-height: 520px;
+            background: url("../images/header-bg.jpg") no-repeat fixed center top / 160% 100% transparent;
+            &> nav {
+                display: block;
+                position: relative;
+                top: -5px;
+                left: 21%;
+                width: 60%;
+                margin-top: 45px;   
+            }
+            & .early-bird {
+                animation: none;
+            }
+            & .next {
+                display: none;
+            }
+        }
+        &> main {
+            &> section,
+            &> article {
+                padding: 2em 3em;
+                aside {
+                    margin: 0;
+                    .location,
+                    .date,
+                    .language {
+                        margin-right: 1em;
+                    }
+                }
+                nav {
+                    width: 100%;
+                    a {
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            &> article {
+                &> a {
+                    background: none;
+                    transform: rotate(0deg);
+                    position: static;
+                    width: inherit;
+                    height: inherit;
+                    padding: 1em;
+                    color: #c36;
+                }
+            }
+        }
+    }
+    #intern {
+        &> header {
+            nav {
+                top: 0;
+                left: 0;
+                width: 100%;
+                margin: 0; 
+                &> a {
+
+                }
+            }
+        }
+        &> main {
+            &> section {
+                padding: 2em;
+                &> ol,
+                &> ul {
+                    padding: 0 2em;
+                }
+                &> nav {
+                    margin: 3em 0 1em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+    body {
+        &> header {
+            min-height: 510px;
+            background: url("../images/header-bg.jpg") no-repeat fixed center top / 250% 100% transparent;
+            &> nav {
+                display: block;
+                position: static;
+                margin-top: 25px;   
+            }
+            & .early-bird {
+                animation: none;
+            }
+            & .next {
+                display: none;
+            }
+        }
+        &> main {
+            font-size: 0.85em;
+            &> section,
+            &> article {
+                padding: 2em 1em;
+                aside {
+                    margin: 0;
+                    .location,
+                    .date,
+                    .language {
+                        margin-right: 1em;
+                    }
+                }
+                nav {
+                    width: 100%;
+                    a {
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            &> article {
+                &> a {
+                    background: none;
+                    transform: rotate(0deg);
+                    position: static;
+                    width: inherit;
+                    height: inherit;
+                    padding: 1em;
+                    color: #c36;
+                }
+            }
+        }
+        &> footer {
+            padding: 1em 0;
+        }
+    }
+    #intern {
+        &> header {
+            nav {
+                top: 0;
+                left: 0;
+                width: 100%;
+                margin: 0; 
+                &> a {
+
+                }
+            }
+        }
+        &> main {
+            &> section {
+                padding: 2em;
+                &> ol,
+                &> ul {
+                    padding: 1em;
+                    &>li {
+                        &> ol,
+                        &> ul {
+                            padding: 1em;
+                        }
+                    } 
+                }
+                &> nav {
+                    margin: 0 0 1em 0;
+                }
             }
         }
     }
