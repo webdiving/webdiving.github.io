@@ -11,25 +11,18 @@ module.exports = function(grunt) {
     grunt.initConfig({
         sass: {                              // Task
             dist: {                            // Target
-                options: {
-                    sourcemap : true
-                },
                 files: {                         // Dictionary of files
                     'css/main.css': 'css/main.scss'      // 'destination': 'source'
                 }
             }
         },
-    
 
         autoprefixer: {
-            options: {
-            // Task-specific options go here.
-            },
             no_dest: {
                 src: 'css/main.css' // globbing is also possible here
             },
         },
-        
+
         watch: {
             dist: {
                 files: ['css/main.scss'],
@@ -37,7 +30,7 @@ module.exports = function(grunt) {
                 options: {
                     spawn: false
                 }
-            }
+            },
         }
     })
     
