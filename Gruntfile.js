@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         watch: {
             dist: {
                 files: ['css/main.scss'],
-                task: ['default'],
+                tasks: ['default'],
                 options: {
                     spawn: false
                 }
