@@ -4,7 +4,8 @@ main > section aside .language:before, main > article aside .location:before,
 main > article aside .date:before,
 main > article aside .language:before, main > section nav a.info::before, main > article nav a.info::before, main > section nav a.register::before, main > article nav a.register::before, main > section nav a.download::before, main > article nav a.download::before, #intern > header nav > a:first-child:before, #intern > header nav > a:last-child:after {
   font-family: FontAwesome;
-  margin-right: .5em; }
+  margin-right: .5em;
+  padding: 5px; }
 
 .head-icon, main > section h2::before {
   font-family: FontAwesome;
@@ -27,6 +28,9 @@ main > article aside .language:before, main > section nav a.info::before, main >
   50% {
     -webkit-transform: rotate(3deg);
             transform: rotate(3deg); }
+  75% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg); }
   100% {
     -webkit-transform: rotate(-3deg);
             transform: rotate(-3deg); } }
@@ -36,6 +40,9 @@ main > article aside .language:before, main > section nav a.info::before, main >
     -webkit-transform: rotate(-3deg);
             transform: rotate(-3deg); }
   50% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg); }
+  75% {
     -webkit-transform: rotate(3deg);
             transform: rotate(3deg); }
   100% {
