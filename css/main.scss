@@ -17,22 +17,81 @@
     color: #3c6;   
 }
 
+.carousel {
+    overflow: hidden;
+    width: 70%;
+    padding-left: 8%;
+    margin-left: 8%;
+    &> ul {
+        list-style: none;
+        position: relative;
+        width: 500%; // Number of panes * 100%
+        overflow: hidden; // This is used solely to clear floats, it does not add functionality.
+        animation: carousel 30s infinite; 
+        &> li {
+            position: relative;
+            float: left;
+            width: 20%; // 100 divided by number of pane
+            &> img {
+                display: block;
+                width: 80%;
+                max-width: 80%;
+            }
+            &> h2{
+                font-size: 1em;
+                padding: 0.5em;
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                left: 10px;
+                text-align: right;
+                color: #fff;
+                background-color: rgba(0,0,0,0.75);
+                text-align: center;
+                margin-top: 0px;
+                padding: 0px;
+                width: 77.5%;
+            }
+        }
+    }
+}
+
 @keyframes swing {
-    0%{transform: rotate(-3deg)}
-    50%{transform: rotate(3deg)}
-    100%{transform: rotate(-3deg)}
+    0%     {transform: rotate(-3deg)}
+    50%    {transform: rotate(3deg)}
+    100%   {transform: rotate(-3deg)}
 }
 
 @keyframes updown {
-    0%{bottom: 0}
-    40%{bottom: 0}
-    42%{bottom: -2em}
-    44%{bottom: 0}
-    46%{bottom: -2em}
-    48%{bottom: 0}
-    50%{bottom: -2em}
-    52%{bottom: 0}
-    100%{bottom: 0}
+    0%     {bottom: 0}
+    40%    {bottom: 0}
+    42%    {bottom: -2em}
+    44%    {bottom: 0}
+    46%    {bottom: -2em}
+    48%    {bottom: 0}
+    50%    {bottom: -2em}
+    52%    {bottom: 0}
+    100%   {bottom: 0}
+}
+
+@keyframes carousel {
+    0%     { left:0; }
+    11%    { left:0; }
+    12.5%  { left:-100%; }
+    23.5%  { left:-100%; }
+    25%    { left:-200%; }
+    36%    { left:-200%; }
+    37.5%  { left:-300%; }
+    48.5%  { left:-300%; }
+    50%    { left:-400%; }
+    61%    { left:-400%; }
+    62.5%  { left:-300%; }
+    73.5%  { left:-300%; }
+    75%    { left:-200%; }
+    86%    { left:-200%; }
+    87.5%  { left:-100%; }
+    98.5%  { left:-100%; }
+    100%   { left:0; }
 }
 
 @font-face {
@@ -346,6 +405,7 @@ main {
         border-bottom: 1px dashed #ddd;
         background-color: #f6f6f6;
         width: 100%;
+        z-index: 1;
         nav {
             margin: 0px 20px;
             &> a {
@@ -404,11 +464,16 @@ main {
             ol {
             list-style: none;
             }
+            iframe {
+                display: inline-block;
+                pointer-events: none;
+
+            }
         }
     }
 }
 
-@media only screen and (min-width: 821px) and (max-width: 1020px) {
+@media only screen and (min-width: 821px) and (max-width: 1050px) {
 // From touchscreen tablet To small laptop. 
 
     body {
@@ -507,6 +572,12 @@ main {
                 }
             }
         }
+        .carousel {
+            padding-left: 5%;
+            & h2 {
+                display: none;
+            }
+        }
     }
 }
 
@@ -593,6 +664,12 @@ main {
                 &> nav {
                     margin: 0 0 1em 0;
                 }
+            }
+        }
+        .carousel {
+            padding-left: 0%;
+            & h2 {
+                display: none;
             }
         }
     }
