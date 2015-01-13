@@ -520,11 +520,7 @@ main {
     #intern > main > section > ol, #intern > main > section > ul {
       padding: 0 2em; }
     #intern > main > section > nav {
-      margin: 3em 0 1em; }
-  #intern .carousel {
-    padding-left: 5%; }
-    #intern .carousel h2 {
-      display: none; } }
+      margin: 3em 0 1em; } }
 @media only screen and (max-width: 480px) {
   body > header {
     min-height: 510px;
