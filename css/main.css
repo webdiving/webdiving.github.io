@@ -455,8 +455,10 @@ main {
 #intern > main section ol {
   list-style: none; }
 #intern > main section iframe {
-  display: inline-block;
-  pointer-events: none; }
+  display: block;
+  pointer-events: none;
+  width: 100%;
+  max-width: 700px; }
 
 @media only screen and (min-width: 821px) and (max-width: 1050px) {
   body > main > section, body > main > article {
