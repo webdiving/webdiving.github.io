@@ -443,22 +443,24 @@ main {
           width: 15px;
           height: 30px;
           margin-left: 20px; }
-#intern > main section h1,
-#intern > main section h2 {
-  font: 1.6em "BebasNeueRegular",Arial,sans-serif;
-  margin-top: 2.5em; }
-  #intern > main section h1:before,
-  #intern > main section h2:before {
-    display: none; }
-#intern > main section nav {
-  margin: 5em 0px 0em; }
-#intern > main section ol {
-  list-style: none; }
-#intern > main section iframe {
-  display: block;
-  pointer-events: none;
-  width: 100%;
-  max-width: 700px; }
+#intern > main section {
+  /* iframe {
+      display: block;
+      pointer-events: none;
+      width: 100%;
+      max-width: 700px;
+  } */ }
+  #intern > main section h1,
+  #intern > main section h2 {
+    font: 1.6em "BebasNeueRegular",Arial,sans-serif;
+    margin-top: 2.5em; }
+    #intern > main section h1:before,
+    #intern > main section h2:before {
+      display: none; }
+  #intern > main section nav {
+    margin: 5em 0px 0em; }
+  #intern > main section ol {
+    list-style: none; }
 
 @media only screen and (min-width: 821px) and (max-width: 1050px) {
   body > main > section, body > main > article {

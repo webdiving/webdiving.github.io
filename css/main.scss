@@ -463,13 +463,14 @@ main {
             }
             ol {
             list-style: none;
-            }
-            iframe {
+            } 
+            /* iframe {
                 display: block;
                 pointer-events: none;
                 width: 100%;
                 max-width: 700px;
-            }
+            } */
+            
         }
     }
 }
