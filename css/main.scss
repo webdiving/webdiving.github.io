@@ -1,6 +1,7 @@
 .pre-icon {
     font-family: FontAwesome;
     margin-right: .5em;
+    padding: 5px;
 }
 .head-icon {
     font-family: FontAwesome;
@@ -16,23 +17,81 @@
     color: #3c6;   
 }
 
+.carousel {
+    overflow: hidden;
+    width: 70%;
+    padding-left: 8%;
+    margin-left: 8%;
+    &> ul {
+        list-style: none;
+        position: relative;
+        width: 500%; // Number of panes * 100%
+        overflow: hidden; // This is used solely to clear floats, it does not add functionality.
+        animation: carousel 30s infinite; 
+        &> li {
+            position: relative;
+            float: left;
+            width: 20%; // 100 divided by number of pane
+            &> img {
+                display: block;
+                width: 80%;
+                max-width: 80%;
+            }
+            &> h2{
+                font-size: 1em;
+                padding: 0.5em;
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                left: 10px;
+                text-align: right;
+                color: #fff;
+                background-color: rgba(0,0,0,0.75);
+                text-align: center;
+                margin-top: 0px;
+                padding: 0px;
+                width: 77.5%;
+            }
+        }
+    }
+}
 
 @keyframes swing {
-    0%{transform: rotate(-3deg)}
-    50%{transform: rotate(3deg)}
-    100%{transform: rotate(-3deg)}
+    0%     {transform: rotate(-3deg)}
+    50%    {transform: rotate(3deg)}
+    100%   {transform: rotate(-3deg)}
 }
 
 @keyframes updown {
-    0%{bottom: 0}
-    40%{bottom: 0}
-    42%{bottom: -2em}
-    44%{bottom: 0}
-    46%{bottom: -2em}
-    48%{bottom: 0}
-    50%{bottom: -2em}
-    52%{bottom: 0}
-    100%{bottom: 0}
+    0%     {bottom: 0}
+    40%    {bottom: 0}
+    42%    {bottom: -2em}
+    44%    {bottom: 0}
+    46%    {bottom: -2em}
+    48%    {bottom: 0}
+    50%    {bottom: -2em}
+    52%    {bottom: 0}
+    100%   {bottom: 0}
+}
+
+@keyframes carousel {
+    0%     { left:0; }
+    11%    { left:0; }
+    12.5%  { left:-100%; }
+    23.5%  { left:-100%; }
+    25%    { left:-200%; }
+    36%    { left:-200%; }
+    37.5%  { left:-300%; }
+    48.5%  { left:-300%; }
+    50%    { left:-400%; }
+    61%    { left:-400%; }
+    62.5%  { left:-300%; }
+    73.5%  { left:-300%; }
+    75%    { left:-200%; }
+    86%    { left:-200%; }
+    87.5%  { left:-100%; }
+    98.5%  { left:-100%; }
+    100%   { left:0; }
 }
 
 @font-face {
@@ -134,8 +193,8 @@ body {
         }
         & .next {
                 display: block;
-                width: 55px;
-                height: 50px;
+                width: 60px;
+                height: 40px;
                 position: absolute;
                 text-align: center;
                 bottom: 0; // adapt the "updown" animation to this value.
@@ -182,7 +241,7 @@ main {
         }
 
         &> img {
-            width: 30%;
+            width: 270px;
             height: auto;
             display: block;
             margin-left: auto;
@@ -346,6 +405,7 @@ main {
         border-bottom: 1px dashed #ddd;
         background-color: #f6f6f6;
         width: 100%;
+        z-index: 1;
         nav {
             margin: 0px 20px;
             &> a {
@@ -403,6 +463,209 @@ main {
             }
             ol {
             list-style: none;
+            } 
+            /* iframe {
+                display: block;
+                pointer-events: none;
+                width: 100%;
+                max-width: 700px;
+            } */
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 821px) and (max-width: 1050px) {
+// From touchscreen tablet To small laptop. 
+
+    body {
+        &> main {
+            &> section,
+            &> article {
+                padding: 3em 4em;
+            }
+
+            &> article {
+                &> a {
+                    top: -215px;
+                    left: 77%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 820px) { 
+// From smartphone To touchscreen tablet. 
+    
+    body {
+        &> header {
+            min-height: 520px;
+            background: url("../images/header-bg.jpg") no-repeat fixed center top / 160% 100% transparent;
+            &> nav {
+                display: block;
+                position: relative;
+                top: -5px;
+                left: 21%;
+                width: 60%;
+                margin-top: 45px;   
+            }
+            & .early-bird {
+                animation: none;
+            }
+            & .next {
+                display: none;
+            }
+        }
+        &> main {
+            &> section,
+            &> article {
+                padding: 2em 3em;
+                aside {
+                    margin: 0;
+                    .location,
+                    .date,
+                    .language {
+                        margin-right: 1em;
+                    }
+                }
+                nav {
+                    width: 100%;
+                    a {
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            &> article {
+                &> a {
+                    background: none;
+                    transform: rotate(0deg);
+                    position: static;
+                    width: inherit;
+                    height: inherit;
+                    padding: 1em;
+                    color: #c36;
+                }
+            }
+        }
+    }
+    #intern {
+        &> header {
+            nav {
+                top: 0;
+                left: 0;
+                width: 100%;
+                margin: 0; 
+                &> a {
+
+                }
+            }
+        }
+        &> main {
+            &> section {
+                padding: 2em;
+                &> ol,
+                &> ul {
+                    padding: 0 2em;
+                }
+                &> nav {
+                    margin: 3em 0 1em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+    body {
+        &> header {
+            min-height: 510px;
+            background: url("../images/header-bg.jpg") no-repeat fixed center top / 250% 100% transparent;
+            &> nav {
+                display: block;
+                position: static;
+                margin-top: 25px;   
+            }
+            & .early-bird {
+                animation: none;
+            }
+            & .next {
+                display: none;
+            }
+        }
+        &> main {
+            font-size: 0.85em;
+            &> section,
+            &> article {
+                padding: 2em 1em;
+                aside {
+                    margin: 0;
+                    .location,
+                    .date,
+                    .language {
+                        margin-right: 1em;
+                    }
+                }
+                nav {
+                    width: 100%;
+                    a {
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            &> article {
+                &> a {
+                    background: none;
+                    transform: rotate(0deg);
+                    position: static;
+                    width: inherit;
+                    height: inherit;
+                    padding: 1em;
+                    color: #c36;
+                }
+            }
+        }
+        &> footer {
+            padding: 1em 0;
+        }
+    }
+    #intern {
+        &> header {
+            nav {
+                top: 0;
+                left: 0;
+                width: 100%;
+                margin: 0; 
+                &> a {
+
+                }
+            }
+        }
+        &> main {
+            &> section {
+                padding: 2em;
+                &> ol,
+                &> ul {
+                    padding: 1em;
+                    &>li {
+                        &> ol,
+                        &> ul {
+                            padding: 1em;
+                        }
+                    } 
+                }
+                &> nav {
+                    margin: 0 0 1em 0;
+                }
+            }
+        }
+        .carousel {
+            padding-left: 0%;
+            & h2 {
+                display: none;
             }
         }
     }
