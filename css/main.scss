@@ -14,7 +14,7 @@
     color: #36c;
 }
 .green-color {
-    color: #3c6;   
+    color: #3c6;
 }
 
 .carousel {
@@ -27,7 +27,7 @@
         position: relative;
         width: 500%; // Number of panes * 100%
         overflow: hidden; // This is used solely to clear floats, it does not add functionality.
-        animation: carousel 30s infinite; 
+        animation: carousel 30s infinite;
         &> li {
             position: relative;
             float: left;
@@ -266,7 +266,6 @@ main {
             text-align: center;
             font-size: 1.2em;
             padding: .2em 0;
-            margin-top: -180px;
             .location,
             .date,
             .language {
@@ -294,6 +293,12 @@ main {
                 @extend .blue-color;
             }
         }
+        &#html5 aside {
+            margin-top: -180px;
+        }
+        &#django > img:first-child {
+            margin-top: -53px;
+        }
 
         &> p {
             margin: 1em 0;
@@ -302,7 +307,7 @@ main {
                 @extend .blue-color;
             }
         }
-        
+
         blockquote {
             text-align: center;
         }
@@ -358,7 +363,7 @@ main {
             &::before {
                 @extend .head-icon;
                 @extend .blue-color;
-                margin-top: .3em;  
+                margin-top: .3em;
                 content: "\f19c";
                 font-size: 2em;
             }
@@ -463,20 +468,20 @@ main {
             }
             ol {
             list-style: none;
-            } 
+            }
             /* iframe {
                 display: block;
                 pointer-events: none;
                 width: 100%;
                 max-width: 700px;
             } */
-            
+
         }
     }
 }
 
 @media only screen and (min-width: 821px) and (max-width: 1050px) {
-// From touchscreen tablet To small laptop. 
+// From touchscreen tablet To small laptop.
 
     body {
         &> main {
@@ -495,9 +500,9 @@ main {
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 820px) { 
-// From smartphone To touchscreen tablet. 
-    
+@media only screen and (min-width: 481px) and (max-width: 820px) {
+// From smartphone To touchscreen tablet.
+
     body {
         &> header {
             min-height: 520px;
@@ -508,7 +513,7 @@ main {
                 top: -5px;
                 left: 21%;
                 width: 60%;
-                margin-top: 45px;   
+                margin-top: 45px;
             }
             & .early-bird {
                 animation: none;
@@ -556,7 +561,7 @@ main {
                 top: 0;
                 left: 0;
                 width: 100%;
-                margin: 0; 
+                margin: 0;
                 &> a {
 
                 }
@@ -578,7 +583,7 @@ main {
 }
 
 @media only screen and (max-width: 480px) {
-    
+
     body {
         &> header {
             min-height: 510px;
@@ -586,7 +591,7 @@ main {
             &> nav {
                 display: block;
                 position: static;
-                margin-top: 25px;   
+                margin-top: 25px;
             }
             & .early-bird {
                 animation: none;
@@ -638,7 +643,7 @@ main {
                 top: 0;
                 left: 0;
                 width: 100%;
-                margin: 0; 
+                margin: 0;
                 &> a {
 
                 }
@@ -655,7 +660,7 @@ main {
                         &> ul {
                             padding: 1em;
                         }
-                    } 
+                    }
                 }
                 &> nav {
                     margin: 0 0 1em 0;
