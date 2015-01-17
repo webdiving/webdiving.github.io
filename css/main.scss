@@ -535,6 +535,11 @@ main {
                 left: 21%;
                 width: 60%;
                 margin-top: 45px;
+                a {
+                    &:nth-child(3) {
+                        background: url("../images/header-nav-left.svg") repeat scroll 0% 0% transparent;
+                    }
+                }
             }
             & .early-bird {
                 animation: none;
@@ -613,6 +618,11 @@ main {
                 display: block;
                 position: static;
                 margin-top: 25px;
+                a {
+                    &:nth-child(3) {
+                        background: url("../images/header-nav-left.svg") repeat scroll 0% 0% transparent;
+                    }
+                }
             }
             & .early-bird {
                 animation: none;

@@ -495,6 +495,8 @@ main {
       left: 21%;
       width: 60%;
       margin-top: 45px; }
+      body > header > nav a:nth-child(3) {
+        background: url("../images/header-nav-left.svg") repeat scroll 0% 0% transparent; }
     body > header .early-bird {
       -webkit-animation: none;
               animation: none; }
@@ -545,6 +547,8 @@ main {
       display: block;
       position: static;
       margin-top: 25px; }
+      body > header > nav a:nth-child(3) {
+        background: url("../images/header-nav-left.svg") repeat scroll 0% 0% transparent; }
     body > header .early-bird {
       -webkit-animation: none;
               animation: none; }
