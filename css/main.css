@@ -31,8 +31,7 @@ main > article aside .language:before, main > section nav a.info::before, main >
     position: relative;
     width: 500%;
     overflow: hidden;
-    -webkit-animation: carousel 30s infinite;
-            animation: carousel 30s infinite; }
+    animation: carousel 30s infinite; }
     .carousel > ul > li {
       position: relative;
       float: left;
@@ -56,46 +55,13 @@ main > article aside .language:before, main > section nav a.info::before, main >
         padding: 0px;
         width: 77.5%; }
 
-@-webkit-keyframes swing {
-  0% {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg); }
-  50% {
-    -webkit-transform: rotate(3deg);
-            transform: rotate(3deg); }
-  100% {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg); } }
-
 @keyframes swing {
   0% {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg); }
+    transform: rotate(-3deg); }
   50% {
-    -webkit-transform: rotate(3deg);
-            transform: rotate(3deg); }
+    transform: rotate(3deg); }
   100% {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg); } }
-@-webkit-keyframes updown {
-  0% {
-    bottom: 0; }
-  40% {
-    bottom: 0; }
-  42% {
-    bottom: -2em; }
-  44% {
-    bottom: 0; }
-  46% {
-    bottom: -2em; }
-  48% {
-    bottom: 0; }
-  50% {
-    bottom: -2em; }
-  52% {
-    bottom: 0; }
-  100% {
-    bottom: 0; } }
+    transform: rotate(-3deg); } }
 @keyframes updown {
   0% {
     bottom: 0; }
@@ -115,41 +81,6 @@ main > article aside .language:before, main > section nav a.info::before, main >
     bottom: 0; }
   100% {
     bottom: 0; } }
-@-webkit-keyframes carousel {
-  0% {
-    left: 0; }
-  11% {
-    left: 0; }
-  12.5% {
-    left: -100%; }
-  23.5% {
-    left: -100%; }
-  25% {
-    left: -200%; }
-  36% {
-    left: -200%; }
-  37.5% {
-    left: -300%; }
-  48.5% {
-    left: -300%; }
-  50% {
-    left: -400%; }
-  61% {
-    left: -400%; }
-  62.5% {
-    left: -300%; }
-  73.5% {
-    left: -300%; }
-  75% {
-    left: -200%; }
-  86% {
-    left: -200%; }
-  87.5% {
-    left: -100%; }
-  98.5% {
-    left: -100%; }
-  100% {
-    left: 0; } }
 @keyframes carousel {
   0% {
     left: 0; }
@@ -255,11 +186,8 @@ body {
       margin: -17px auto auto;
       border: medium none;
       text-indent: -3000px;
-      -webkit-animation: swing 5s infinite ease-in-out;
-              animation: swing 5s infinite ease-in-out;
-      -webkit-transform-origin: center top;
-          -ms-transform-origin: center top;
-              transform-origin: center top; }
+      animation: swing 5s infinite ease-in-out;
+      transform-origin: center top; }
       body > header .early-bird:visited, body > header .early-bird:focus {
         border: none; }
     body > header .next {
@@ -270,8 +198,7 @@ body {
       text-align: center;
       bottom: 0;
       color: white;
-      -webkit-animation: 10s updown infinite ease-in-out;
-              animation: 10s updown infinite ease-in-out;
+      animation: 10s updown infinite ease-in-out;
       overflow: hidden;
       margin: 0 auto 2em 0;
       padding-left: 50%;
@@ -335,7 +262,7 @@ main {
         content: "\f073"; }
       main > section aside .language:before, main > article aside .language:before {
         content: "\f1ab"; }
-    main > section#html5 aside, main > article#html5 aside {
+    main > section#js aside, main > article#js aside {
       margin-top: -210px; }
     main > section#django > img:first-child, main > article#django > img:first-child {
       width: 200px; }
@@ -344,7 +271,8 @@ main {
       main > section > p strong, main > article > p strong {
         white-space: nowrap; }
     main > section blockquote, main > article blockquote {
-      text-align: center; }
+      text-align: center;
+      font-style: italic; }
     main > section nav, main > article nav {
       text-align: center;
       margin: 3em 0 1em; }
@@ -390,9 +318,7 @@ main {
     padding: 2em 1.8em 2em 1.8em;
     text-align: center;
     display: block;
-    -webkit-transform: rotate(15deg);
-        -ms-transform: rotate(15deg);
-            transform: rotate(15deg);
+    transform: rotate(15deg);
     color: #FFC7F2;
     font-weight: bold;
     font-size: 1em;
@@ -431,9 +357,7 @@ main {
         #intern > header nav > a:first-child:before {
           content: "\f078";
           font-size: 0.9em;
-          -webkit-transform: rotate(90deg);
-              -ms-transform: rotate(90deg);
-                  transform: rotate(90deg);
+          transform: rotate(90deg);
           display: inline-block;
           width: 30px;
           height: 30px; }
@@ -443,9 +367,7 @@ main {
         #intern > header nav > a:last-child:after {
           content: "\f078";
           font-size: 0.9em;
-          -webkit-transform: rotate(270deg);
-              -ms-transform: rotate(270deg);
-                  transform: rotate(270deg);
+          transform: rotate(270deg);
           display: inline-block;
           width: 15px;
           height: 30px;
@@ -476,13 +398,13 @@ main {
     top: -215px;
     left: 77%; } }
 @media only screen and (max-width: 820px) {
-  main > article#html5 > a {
+  main > article#js + > a {
     font-weight: normal; }
-    main > article#html5 > a span {
+    main > article#js + > a span {
       font-size: inherit;
       font-weight: bold;
       display: inline; }
-  main > article#html5 aside {
+  main > article#js + aside {
     margin-top: 0; } }
 @media only screen and (min-width: 481px) and (max-width: 820px) {
   body > header {
@@ -498,8 +420,7 @@ main {
       body > header > nav a:nth-child(3) {
         background: url("../images/header-nav-left.svg") repeat scroll 0% 0% transparent; }
     body > header .early-bird {
-      -webkit-animation: none;
-              animation: none; }
+      animation: none; }
     body > header .next {
       display: none; }
   body > main > section, body > main > article {
@@ -519,9 +440,7 @@ main {
         margin-top: 10px; }
   body > main > article > a {
     background: none;
-    -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     position: static;
     width: inherit;
     height: inherit;
@@ -550,8 +469,7 @@ main {
       body > header > nav a:nth-child(3) {
         background: url("../images/header-nav-left.svg") repeat scroll 0% 0% transparent; }
     body > header .early-bird {
-      -webkit-animation: none;
-              animation: none; }
+      animation: none; }
     body > header .next {
       display: none; }
   body > main {
@@ -573,9 +491,7 @@ main {
           margin-top: 10px; }
     body > main > article > a {
       background: none;
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg);
+      transform: rotate(0deg);
       position: static;
       width: inherit;
       height: inherit;
@@ -601,3 +517,5 @@ main {
     padding-left: 0%; }
     #intern .carousel h2 {
       display: none; } }
+
+/*# sourceMappingURL=main.css.map */

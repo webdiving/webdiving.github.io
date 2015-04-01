@@ -298,7 +298,7 @@ main {
                 @extend .blue-color;
             }
         }
-        &#html5 aside {
+        &#js aside {
             margin-top: -210px;
         }
         &#django > img:first-child {
@@ -315,6 +315,7 @@ main {
 
         blockquote {
             text-align: center;
+            font-style: italic;
         }
 
         nav {
@@ -506,7 +507,7 @@ main {
 }
 
 @media only screen and (max-width: 820px) {
-    main > article#html5 {
+    main > article#js+ {
         &> a {
             font-weight: normal;
             span {
