@@ -328,6 +328,8 @@ main {
       font-size: 2em;
       display: block;
       margin: .3em 0; }
+    main > article > a + * {
+      margin-top: -215px; }
 
 #intern > header {
   position: fixed;
