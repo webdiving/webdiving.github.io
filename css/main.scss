@@ -98,9 +98,9 @@
     font-family: 'BebasNeueRegular';
     src: url('../fonts/BebasNeue-webfont.eot');
     src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/BebasNeue-webfont.woff') format('woff'),
-         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
-         url('../fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+        url('../fonts/BebasNeue-webfont.woff') format('woff'),
+        url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
+        url('../fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -196,19 +196,19 @@ body {
             }
         }
         & .next {
-                display: block;
-                width: 60px;
-                height: 40px;
-                position: absolute;
-                text-align: center;
-                bottom: 0; // adapt the "updown" animation to this value.
-                color: white;
-                animation: 10s updown infinite ease-in-out;
-                overflow: hidden;
-                margin: 0 auto 2em 0;
-                padding-left: 50%;
-                margin-left: -30px;
-                text-decoration: none;
+            display: block;
+            width: 60px;
+            height: 40px;
+            position: absolute;
+            text-align: center;
+            bottom: 0; // adapt the "updown" animation to this value.
+            color: white;
+            animation: 10s updown infinite ease-in-out;
+            overflow: hidden;
+            margin: 0 auto 2em 0;
+            padding-left: 50%;
+            margin-left: -30px;
+            text-decoration: none;
 
             &:before {
                 @extend .pre-icon;
@@ -281,13 +281,20 @@ main {
 
             }
             a {
+                position: relative;
+                padding-left: 2em;
                 color: #125;
-                text-decoration: none;
+                //                text-decoration: none;
             }
 
             .location:before {
                 content: "\f124";
                 @extend .blue-color;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
             }
             .date:before {
                 content: "\f073";
@@ -399,7 +406,7 @@ main {
                 margin: .3em 0;
             }
             + * {
-              margin-top: -215px;
+                margin-top: -215px;
             }
         }
     }
@@ -476,21 +483,21 @@ main {
                 margin: 5em 0px 0em;
             }
             ol {
-            list-style: none;
+                list-style: none;
             }
             /* iframe {
-                display: block;
-                pointer-events: none;
-                width: 100%;
-                max-width: 700px;
-            } */
+            display: block;
+            pointer-events: none;
+            width: 100%;
+            max-width: 700px;
+        } */
 
         }
     }
 }
 
 @media only screen and (min-width: 821px) and (max-width: 1050px) {
-// From touchscreen tablet To small laptop.
+    // From touchscreen tablet To small laptop.
 
     body {
         &> main {
@@ -526,7 +533,7 @@ main {
 }
 
 @media only screen and (min-width: 481px) and (max-width: 820px) {
-// From smartphone To touchscreen tablet.
+    // From smartphone To touchscreen tablet.
 
     body {
         &> header {
